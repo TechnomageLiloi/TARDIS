@@ -1,3 +1,5 @@
 /RuneFramework.phar
 /Config/Private.json
 /Config/Private.php
+/Tests/.phpunit.result.cache
+/Tests/Jasmine/
