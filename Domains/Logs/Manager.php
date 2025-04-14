@@ -2,7 +2,7 @@
 
 namespace Liloi\TARDIS\Domains\Logs;
 
-use Liloi\TARDIS\Domain\Manager as DomainManager;
+use Liloi\TARDIS\Domains\Manager as DomainManager;
 
 /**
  * Question's manager.
