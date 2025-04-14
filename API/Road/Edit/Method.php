@@ -2,8 +2,6 @@
 
 namespace Liloi\TARDIS\API\Road\Edit;
 
-use Liloi\API\Response;
-use Liloi\I60\Domains\Tickets\Statuses as LevelsStatuses;
 use Liloi\TARDIS\API\Method as SuperMethod;
 use Liloi\TARDIS\Domains\Road\Manager as DiaryManager;
 

@@ -7,6 +7,8 @@
         <a href="javascript:void(0)" onclick="Requests.Road.edit('<?php echo $entity->getKey(); ?>');">Edit</a>
     </div>
 
+    <hr/>
+
     <div class="data">
         <?php echo $entity->getData(); ?><br/>
     </div>
