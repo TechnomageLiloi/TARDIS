@@ -3,6 +3,7 @@
 <div id="application-diary-show" class="stylo">
 
     <div class="controls">
+        <a href="/">Current</a> &diams;
         <a href="javascript:void(0)" onclick="Requests.Road.show('<?php echo $entity->getKey(); ?>');">Show</a> &diams;
         <a href="javascript:void(0)" onclick="Requests.Road.edit('<?php echo $entity->getKey(); ?>');">Edit</a>
     </div>
