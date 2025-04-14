@@ -10,7 +10,7 @@ use Liloi\TARDIS\Exceptions\NotFoundException;
 
 class Application extends GeneralApplication
 {
-    const PREFIX = 'Liloi\TARDIS';
+    public const PREFIX = 'Liloi\TARDIS';
 
     public function __construct(array $config)
     {
