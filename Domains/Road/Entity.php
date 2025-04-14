@@ -21,7 +21,7 @@ class Entity extends AbstractEntity
 
     public function parse(): string
     {
-        return Parser::parseString($this->getSummary());
+        return Parser::parseString($this->getProgram());
     }
 
     public function save(): void

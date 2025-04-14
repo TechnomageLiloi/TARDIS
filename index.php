@@ -14,7 +14,7 @@ $config = array_merge([
         $private['root'] . '/Requests.js',
         $private['root'] . '/API/Road/Requests.js',
     ],
-    'prefix' => 'i60_'
+    'prefix' => 'tardis_'
 ], $private);
 
 $app = new Application($config);

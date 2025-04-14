@@ -1,4 +1,4 @@
-<link href="<?php echo ROOT_URL; ?>/API/Road/Show/Style.css" rel="stylesheet" />
+<link href="/API/Road/Show/Style.css" rel="stylesheet" />
 
 <div id="application-diary-show" class="stylo">
 

@@ -38,21 +38,21 @@ class Manager extends DomainManager
     /**
      * Load day by key.
      *
-     * @param string $keyStep
+     * @param string $keyDay
      * @return Entity
      */
-    public static function load(string $keyStep): Entity
+    public static function load(string $keyDay): Entity
     {
         $name = self::getTableName();
 
         $row = self::getAdapter()->getRow(sprintf(
             'select * from %s where key_day="%s";',
-            $name, $keyStep
+            $name, $keyDay
         ));
 
         if(!$row)
         {
-            // @todo: throw exception
+            return self::create($keyDay);
         }
 
         return Entity::create($row);
@@ -65,14 +65,7 @@ class Manager extends DomainManager
      */
     public static function loadCurrent(): Entity
     {
-        $name = self::getTableName();
-
-        $row = self::getAdapter()->getRow(sprintf(
-            'select * from %s order by key_day desc limit 1;',
-            $name
-        ));
-
-        return Entity::create($row);
+        return self::load(date('Y-m-d'));
     }
 
     /**
@@ -92,10 +85,10 @@ class Manager extends DomainManager
     /**
      * Create new day.
      */
-    public static function create(): Entity
+    public static function create(string $keyDay): Entity
     {
         $data = [
-            'key_day' => date('Y-m-d'),
+            'key_day' => $keyDay,
             'program' => '-',
             'data' => '{}'
         ];

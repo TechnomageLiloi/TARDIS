@@ -1,4 +1,4 @@
-<link href="<?php echo ROOT_URL; ?>/API/Road/Edit/Style.css" rel="stylesheet" />
+<link href="/API/Road/Edit/Style.css" rel="stylesheet" />
 
 <div id="application-diary-edit">
     <a href="javascript:void(0)" onclick="Requests.Road.save('<?php echo $entity->getKey(); ?>');">Save</a>

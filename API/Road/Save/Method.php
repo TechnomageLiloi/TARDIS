@@ -20,6 +20,6 @@ class Method extends SuperMethod
 
         $entity->save();
 
-        return new Response();
+        return [];
     }
 }
