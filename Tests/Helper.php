@@ -15,7 +15,7 @@ class Helper
     {
         $prefix = 'tardis_';
         $tables = [
-            $prefix . 'atoms',
+            $prefix . 'road',
             $prefix . 'config',
             $prefix . 'logs'
         ];
