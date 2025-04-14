@@ -38,6 +38,19 @@ class Application extends GeneralApplication
         DomainsManager::setConfig(Pool::getSingleton());
     }
 
+    public function compile(): string
+    {
+        $URI = $_SERVER['REQUEST_URI'];
+
+        if($URI === '/')
+        {
+            header('Location: ' . date('/Y/m/d'));
+            die();
+        }
+
+        return parent::compile();
+    }
+
     /**
      * Gets response of API method.
      *
