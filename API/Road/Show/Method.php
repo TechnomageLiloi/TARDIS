@@ -9,7 +9,10 @@ class Method extends SuperMethod
 {
     public function execute(): array
     {
-        $entity = DiaryManager::loadCurrent();
+        $URI = $_SERVER['REQUEST_URI'];
+        $key = str_replace('/', '-', trim($URI, '/'));
+
+        $entity = DiaryManager::load($key);
 
         return [
             'render' => $this->render(__DIR__ . '/Template.tpl', [
