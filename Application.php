@@ -40,9 +40,9 @@ class Application extends GeneralApplication
 
     public function compile(): string
     {
-        $URI = $_SERVER['REQUEST_URI'];
+        $URI = trim($_SERVER['REQUEST_URI'], '/');
 
-        if($URI === '/')
+        if(!$URI)
         {
             header('Location: ' . date('/Y/m/d'));
             die();
