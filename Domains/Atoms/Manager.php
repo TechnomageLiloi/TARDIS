@@ -1,8 +1,9 @@
 <?php
 
-namespace Liloi\Rune\Domain\Atoms;
+namespace Liloi\TARDIS\Domains\Atoms;
 
 use Liloi\TARDIS\Domains\Manager as DomainManager;
+use Liloi\TARDIS\Application;
 
 class Manager extends DomainManager
 {
@@ -12,13 +13,21 @@ class Manager extends DomainManager
 
         return Entity::create([
             'link' => $link,
-            'path' => ROOT_DIR . '/Root' . $link
+            'path' => Application::ROOT_DIR . $link
         ]);
     }
 
-    public static function URLToLink(string $URL): string
+    public static function URLToLink(string $URI): string
     {
-        $link = '/' . trim($URL, '/');
-        return $link;
+        $URI = trim($URI, '/');
+        $parts = explode('/', $URI);
+        array_shift($parts);
+        array_shift($parts);
+        array_shift($parts);
+
+        $config = self::getConfig();
+        $root = $config->get('atoms');
+
+        return $root . '/' . implode('/', $parts);
     }
 }

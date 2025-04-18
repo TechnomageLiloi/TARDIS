@@ -1,6 +1,6 @@
 <?php
 
-namespace Liloi\Rune\Domain\Atoms;
+namespace Liloi\TARDIS\Domains\Atoms;
 
 use Liloi\Tools\Collection as AbstractCollection;
 

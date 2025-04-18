@@ -12,6 +12,8 @@ class Application extends GeneralApplication
 {
     public const PREFIX = 'Liloi\TARDIS';
 
+    public const ROOT_DIR = __DIR__;
+
     public function __construct(array $config)
     {
         parent::__construct($config);
@@ -35,6 +37,7 @@ class Application extends GeneralApplication
 
         Pool::getSingleton()->set(new Sparkle('connection', function() use ($config) { return $config['connection'];}));
         Pool::getSingleton()->set(new Sparkle('prefix', function() use ($config) { return $config['prefix'];}));
+        Pool::getSingleton()->set(new Sparkle('atoms', function() use ($config) { return $config['atoms'];}));
         DomainsManager::setConfig(Pool::getSingleton());
     }
 
