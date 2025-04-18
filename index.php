@@ -14,6 +14,7 @@ $config = array_merge([
         $private['root'] . '/Requests.js',
         $private['root'] . '/API/Road/Requests.js',
         $private['root'] . '/API/Quest/Requests.js',
+        $private['root'] . '/API/Atoms/Requests.js',
     ],
     'prefix' => 'tardis_'
 ], $private);
