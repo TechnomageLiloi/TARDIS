@@ -18,24 +18,6 @@ class Entity extends AbstractEntity
 {
     public function getItems(): array
     {
-        $files = [];
-
-        $link = $this->getLink();
-        $rows = scandir($this->getPath());
-
-        foreach ($rows as $row)
-        {
-            if(in_array($row, ['.', '..']))
-            {
-                continue;
-            }
-
-            $files[] = [
-                'name' => $row,
-                'link' => $link . '/' . $row,
-            ];
-        }
-
-        return $files;
+        return Manager::getItems($this);
     }
 }

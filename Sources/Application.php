@@ -17,7 +17,7 @@ class Application extends GeneralApplication
 
         Pool::getSingleton()->set(new Sparkle('connection', function() use ($config) { return $config['connection'];}));
         Pool::getSingleton()->set(new Sparkle('prefix', function() use ($config) { return $config['prefix'];}));
-        Pool::getSingleton()->set(new Sparkle('atoms', function() use ($config) { return $config['atoms'];}));
+        Pool::getSingleton()->set(new Sparkle('root', function() use ($config) { return $config['root'];}));
         DomainsManager::setConfig(Pool::getSingleton());
         Method::setConfig($config);
     }

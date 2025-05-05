@@ -16,4 +16,41 @@ class Manager extends DomainManager
             'path' => $path
         ]);
     }
+
+    public static function getItems(Entity $entity): array
+    {
+        $files = [];
+
+        $root = self::getConfig()->get('root');
+
+        $areaLink = $entity->getLink();
+        $areaPath = $entity->getPath();
+        $names = scandir($areaPath);
+
+        foreach ($names as $name)
+        {
+            if(in_array($name, ['.', '..']))
+            {
+                continue;
+            }
+
+            $path = $areaPath . '/' . $name;
+
+            if(is_dir($path))
+            {
+                $link = str_replace($root, '', $areaLink . '/' . $name);
+            }
+            else
+            {
+                $link = $areaLink . '/' . $name;
+            }
+
+            $files[] = [
+                'name' => $name,
+                'link' => $link,
+            ];
+        }
+
+        return $files;
+    }
 }
