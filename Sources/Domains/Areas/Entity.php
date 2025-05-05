@@ -20,4 +20,16 @@ class Entity extends AbstractEntity
     {
         return Manager::getItems($this);
     }
+
+    public function getProgram(): string
+    {
+        $path = $this->getPath();
+
+        if(file_exists($path . '/Index.md'))
+        {
+            return Parser::parseString(file_get_contents($path . '/Index.md'));
+        }
+
+        return '-';
+    }
 }

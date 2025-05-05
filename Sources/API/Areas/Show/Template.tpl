@@ -2,6 +2,8 @@
 
 <div id="areas-show" class="stylo">
     <div class="controls">
+        <?php echo $entity->getProgram(); ?>
+        <hr/>
         <table>
         <?php foreach($entity->getItems() as $file): ?>
             <tr>
