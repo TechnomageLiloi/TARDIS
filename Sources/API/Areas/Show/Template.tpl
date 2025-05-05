@@ -3,7 +3,7 @@
 <div id="areas-show" class="stylo">
     <div class="controls">
         <table>
-        <?php foreach($files as $file): ?>
+        <?php foreach($entity->getItems() as $file): ?>
             <tr>
                 <td><?php echo $file; ?></td>
             </tr>
