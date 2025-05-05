@@ -6,6 +6,9 @@ use Liloi\Tools\Entity as AbstractEntity;
 use Liloi\Stylo\Parser;
 
 /**
+ * @method string getLink()
+ * @method void setLink(string $value)
+ *
  * @method string getPath()
  * @method void setPath(string $value)
  *
@@ -15,7 +18,23 @@ class Entity extends AbstractEntity
 {
     public function getItems(): array
     {
-        $files = scandir($this->getPath());
+        $files = [];
+
+        $link = $this->getLink();
+        $rows = scandir($this->getPath());
+
+        foreach ($rows as $row)
+        {
+            if(in_array($row, ['.', '..']))
+            {
+                continue;
+            }
+
+            $files[] = [
+                'name' => $row,
+                'link' => $link . '/' . $row,
+            ];
+        }
 
         return $files;
     }

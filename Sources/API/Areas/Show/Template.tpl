@@ -5,7 +5,9 @@
         <table>
         <?php foreach($entity->getItems() as $file): ?>
             <tr>
-                <td><?php echo $file; ?></td>
+                <td>
+                    <a href="<?php echo $file['link']; ?>"><?php echo $file['name']; ?></a>
+                </td>
             </tr>
         <?php endforeach; ?>
         </table>

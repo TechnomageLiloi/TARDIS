@@ -6,9 +6,13 @@ use Liloi\BOYARD\Domains\Manager as DomainManager;
 
 class Manager extends DomainManager
 {
-    static public function getEntityByDirname(string $path): Entity
+    public static function getEntityByDirname(string $link): Entity
     {
+        $link = rtrim($link, '/');
+        $path = ROOT_DIR . $link;
+
         return Entity::create([
+            'link' => $link,
             'path' => $path
         ]);
     }
