@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-php ./Archive.php
+php ./Archiver.php
