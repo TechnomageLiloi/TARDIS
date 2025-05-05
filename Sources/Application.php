@@ -7,11 +7,10 @@ use Liloi\BOYARD\Domains\Manager as DomainsManager;
 use Liloi\Config\Pool;
 use Liloi\Config\Sparkle;
 use Liloi\BOYARD\Exceptions\NotFoundException;
+use Liloi\BOYARD\API\Method;
 
 class Application extends GeneralApplication
 {
-    public const PREFIX = 'Liloi\BOYARD';
-
     public function __construct(array $config)
     {
         parent::__construct($config);
@@ -20,6 +19,7 @@ class Application extends GeneralApplication
         Pool::getSingleton()->set(new Sparkle('prefix', function() use ($config) { return $config['prefix'];}));
         Pool::getSingleton()->set(new Sparkle('atoms', function() use ($config) { return $config['atoms'];}));
         DomainsManager::setConfig(Pool::getSingleton());
+        Method::setConfig($config);
     }
 
     public function compile(): string
@@ -52,7 +52,7 @@ class Application extends GeneralApplication
             return $this->$name($parameters);
         }
 
-        $classMethod = self::PREFIX . '\\API\\' . ucfirst(str_replace('.', '\\', $name)) . '\\Method';
+        $classMethod = 'Liloi\\BOYARD\\API\\' . ucfirst(str_replace('.', '\\', $name)) . '\\Method';
 
         if(class_exists($classMethod))
         {

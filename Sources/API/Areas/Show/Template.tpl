@@ -2,6 +2,12 @@
 
 <div id="areas-show" class="stylo">
     <div class="controls">
-
+        <table>
+        <?php foreach($files as $file): ?>
+            <tr>
+                <td><?php echo $file; ?></td>
+            </tr>
+        <?php endforeach; ?>
+        </table>
     </div>
 </div>

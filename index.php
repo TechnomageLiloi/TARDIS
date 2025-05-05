@@ -2,6 +2,8 @@
 
 include_once __DIR__ . '/vendor/autoload.php';
 
+define('ROOT_DIR', __DIR__);
+
 $private = json_decode(file_get_contents(__DIR__ . '/Config/Private.json'), true);
 
 $config = array_merge([
