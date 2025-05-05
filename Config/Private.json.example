@@ -1,0 +1,10 @@
+{
+  "connection": {
+    "host": "",
+    "user": "",
+    "password": "",
+    "database": ""
+  },
+  "root": "",
+  "atoms": "/Root"
+}

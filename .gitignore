@@ -4,3 +4,5 @@
 /vendor/
 /composer.lock
 /Install/Dump/
+/Config/Private.json
+/Config/Private.Battle.json
