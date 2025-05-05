@@ -9,7 +9,7 @@ class Method extends SuperMethod
     public function execute(): array
     {
         $root = self::getConfig()['root'];
-        $files = scandir(ROOT_DIR . $root);
+        $files = scandir(ROOT_DIR . $root . $_SERVER['REQUEST_URI']);
 
         return [
             'render' => $this->render(__DIR__ . '/Template.tpl', [
