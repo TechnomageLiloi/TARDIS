@@ -9,6 +9,9 @@ use Liloi\Config\Sparkle;
 use Liloi\BOYARD\Exceptions\NotFoundException;
 use Liloi\BOYARD\API\Method;
 
+use Liloi\BOYARD\Domains\Config\Keys as ConfigKeys;
+use Liloi\BOYARD\Domains\Config\Manager as ConfigManager;
+
 class Application extends GeneralApplication
 {
     public function __construct(array $config)
@@ -24,6 +27,13 @@ class Application extends GeneralApplication
 
     public function compile(): string
     {
+        if($_SERVER['REQUEST_URI'] === '/')
+        {
+            $URI = ConfigManager::load(ConfigKeys::CURRENT)->getString();
+            header(sprintf('Location: %s', $URI), true, 301);
+            exit();
+        }
+
         if(isset($_POST['method']))
         {
             return json_encode(['response' => $this->api($_POST['method'], $_POST['parameters'])]);
