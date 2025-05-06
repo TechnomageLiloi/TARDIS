@@ -27,7 +27,11 @@ class Entity extends AbstractEntity
 
         if(file_exists($path . '/.Index.htm'))
         {
-            return file_get_contents($path . '/.Index.htm');
+            $html = file_get_contents($path . '/.Index.htm');
+
+            $html = str_replace('src="./', 'src="' . $this->getLink() . '/', $html);
+
+            return $html;
         }
 
         if(file_exists($path . '/.Index.md'))
