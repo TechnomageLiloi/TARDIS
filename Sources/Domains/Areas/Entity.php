@@ -25,9 +25,9 @@ class Entity extends AbstractEntity
     {
         $path = $this->getPath();
 
-        if(file_exists($path . '/Index.md'))
+        if(file_exists($path . '/.Index.md'))
         {
-            return Parser::parseString(file_get_contents($path . '/Index.md'));
+            return Parser::parseString(file_get_contents($path . '/.Index.md'));
         }
 
         return '-';

@@ -29,7 +29,7 @@ class Manager extends DomainManager
 
         foreach ($names as $name)
         {
-            if(in_array($name, ['.', '..']))
+            if($name[0] === '.')
             {
                 continue;
             }
