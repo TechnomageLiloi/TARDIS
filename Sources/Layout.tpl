@@ -15,6 +15,7 @@
     <body>
         <div style="text-align: center;">
             <a class="butn" href="javascript:void(0)" onclick="window.location.reload();">Refresh</a>
+            <a class="butn" href="javascript:void(0)" onclick="$('#items').toggle();">Items</a>
         </div>
         <div id="page">
             <script>Requests.Areas.show();</script>

@@ -4,14 +4,16 @@
     <div class="controls">
         <?php echo $entity->getProgram(); ?>
         <hr/>
-        <table>
-        <?php foreach($entity->getItems() as $file): ?>
-            <tr>
-                <td>
-                    <a href="<?php echo $file['link']; ?>"><?php echo $file['name']; ?></a>
-                </td>
-            </tr>
-        <?php endforeach; ?>
-        </table>
+        <div id="items" style="display: none;">
+            <table>
+                <?php foreach($entity->getItems() as $file): ?>
+                    <tr>
+                        <td>
+                            <a href="<?php echo $file['link']; ?>"><?php echo $file['name']; ?></a>
+                        </td>
+                    </tr>
+                <?php endforeach; ?>
+            </table>
+        </div>
     </div>
 </div>
