@@ -25,6 +25,11 @@ class Entity extends AbstractEntity
     {
         $path = $this->getPath();
 
+        if(file_exists($path . '/.Index.htm'))
+        {
+            return file_get_contents($path . '/.Index.htm');
+        }
+
         if(file_exists($path . '/.Index.md'))
         {
             return Parser::parseString(file_get_contents($path . '/.Index.md'));
