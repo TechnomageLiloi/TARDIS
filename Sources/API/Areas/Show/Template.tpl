@@ -15,5 +15,7 @@
                 <?php endforeach; ?>
             </table>
         </div>
+        <hr/>
+        <div id="service"></div>
     </div>
 </div>
