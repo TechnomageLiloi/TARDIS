@@ -1,9 +1,9 @@
 Requests.Services = {
     Text: {
-        edit: function ()
+        edit: function (name)
         {
             API.request('Services.Text.Edit', {
-                debug: false
+                name: name
             }, function (data) {
                 $('#service').html(data.render);
             }, function () {

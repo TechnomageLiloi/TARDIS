@@ -6,10 +6,17 @@
         <hr/>
         <div id="items" style="display: none;">
             <table>
+                <tr>
+                    <th>Filename</th>
+                    <th>Actions</th>
+                </tr>
                 <?php foreach($entity->getItems() as $file): ?>
                     <tr>
                         <td>
                             <a href="<?php echo $file['link']; ?>"><?php echo $file['name']; ?></a>
+                        </td>
+                        <td>
+                            <a href="javascript:void(0)" onclick="Requests.Services.Text.edit('<?php echo $file['name']; ?>');">Edit</a>
                         </td>
                     </tr>
                 <?php endforeach; ?>

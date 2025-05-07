@@ -14,6 +14,6 @@
         }
     </style>
     <a class="butn" href="javascript:void(0)" onclick="Requests.Services.Text.save();">Save</a>
-    <input name="filename" value="">
-    <textarea name="data"></textarea>
+    <input name="path" value="<?php echo $path; ?>">
+    <textarea name="data"><?php echo $data; ?></textarea>
 </div>
