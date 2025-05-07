@@ -27,12 +27,12 @@ class Application extends GeneralApplication
 
     public function compile(): string
     {
-        if($_SERVER['REQUEST_URI'] === '/')
-        {
-            $URI = ConfigManager::load(ConfigKeys::CURRENT)->getString();
-            header(sprintf('Location: %s', $URI), true, 301);
-            exit();
-        }
+//        if($_SERVER['REQUEST_URI'] === '/')
+//        {
+//            $URI = ConfigManager::load(ConfigKeys::CURRENT)->getString();
+//            header(sprintf('Location: %s', $URI), true, 301);
+//            exit();
+//        }
 
         if(isset($_POST['method']))
         {

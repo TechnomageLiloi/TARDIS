@@ -4,8 +4,8 @@ namespace Liloi\BOYARD\API\Areas\Show;
 
 use Liloi\BOYARD\API\Method as SuperMethod;
 use Liloi\BOYARD\Domains\Areas\Manager as AreasManager;
-use Liloi\BOYARD\Domains\Config\Keys as ConfigKeys;
-use Liloi\BOYARD\Domains\Config\Manager as ConfigManager;
+//use Liloi\BOYARD\Domains\Config\Keys as ConfigKeys;
+//use Liloi\BOYARD\Domains\Config\Manager as ConfigManager;
 
 class Method extends SuperMethod
 {
@@ -13,7 +13,7 @@ class Method extends SuperMethod
     {
         $URI = $_SERVER['REQUEST_URI'];
 
-        ConfigManager::load(ConfigKeys::CURRENT)->setString($URI)->save();
+//        ConfigManager::load(ConfigKeys::CURRENT)->setString($URI)->save();
         $root = self::getConfig()['root'];
         $entity = AreasManager::getEntityByDirname($root . $URI);
 
