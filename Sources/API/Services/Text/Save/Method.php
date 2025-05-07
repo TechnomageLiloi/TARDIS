@@ -8,6 +8,7 @@ class Method extends SuperMethod
 {
     public function execute(): array
     {
+        file_put_contents($_POST['parameters']['path'], $_POST['parameters']['data']);
         return [];
     }
 }
