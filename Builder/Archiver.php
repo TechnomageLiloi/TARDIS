@@ -1,6 +1,6 @@
 <?php
 
-$fnDumper = __DIR__ . '/Boyard.phar';
+$fnDumper = __DIR__ . '/Rune.phar';
 
 try
 {

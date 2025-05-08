@@ -1,8 +1,8 @@
 <?php
 
-namespace Liloi\BOYARD\Domains\Areas;
+namespace Liloi\Rune\Domains\Areas;
 
-use Liloi\BOYARD\Domains\Manager as DomainManager;
+use Liloi\Rune\Domains\Manager as DomainManager;
 
 class Manager extends DomainManager
 {

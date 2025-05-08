@@ -1,6 +1,6 @@
 <?php
 
-namespace Liloi\BOYARD\Domains\Config;
+namespace Liloi\Rune\Domains\Config;
 
 class Keys
 {

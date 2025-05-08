@@ -1,6 +1,6 @@
 <?php
 
-namespace Liloi\BOYARD\Exceptions;
+namespace Liloi\Rune\Exceptions;
 
 class UndefinedException extends BoyardException
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace Liloi\BOYARD\Domains\Logs;
+namespace Liloi\Rune\Domains\Logs;
 
-use Liloi\BOYARD\Domains\Manager as DomainManager;
+use Liloi\Rune\Domains\Manager as DomainManager;
 
 /**
  * Question's manager.

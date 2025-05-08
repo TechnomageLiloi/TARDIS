@@ -1,11 +1,11 @@
 <?php
 
-namespace Liloi\BOYARD\API\Areas\Show;
+namespace Liloi\Rune\API\Areas\Show;
 
-use Liloi\BOYARD\API\Method as SuperMethod;
-use Liloi\BOYARD\Domains\Areas\Manager as AreasManager;
-//use Liloi\BOYARD\Domains\Config\Keys as ConfigKeys;
-//use Liloi\BOYARD\Domains\Config\Manager as ConfigManager;
+use Liloi\Rune\API\Method as SuperMethod;
+use Liloi\Rune\Domains\Areas\Manager as AreasManager;
+//use Liloi\Rune\Domains\Config\Keys as ConfigKeys;
+//use Liloi\Rune\Domains\Config\Manager as ConfigManager;
 
 class Method extends SuperMethod
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Liloi\BOYARD\API;
+namespace Liloi\Rune\API;
 
 abstract class Method
 {

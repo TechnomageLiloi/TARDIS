@@ -1,6 +1,6 @@
 <?php
 
-namespace Liloi\BOYARD\Domains\Logs;
+namespace Liloi\Rune\Domains\Logs;
 
 use Liloi\Tools\Entity as AbstractEntity;
 use Liloi\Stylo\Parser;

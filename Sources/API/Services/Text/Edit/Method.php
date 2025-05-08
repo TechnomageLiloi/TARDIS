@@ -1,9 +1,9 @@
 <?php
 
-namespace Liloi\BOYARD\API\Services\Text\Edit;
+namespace Liloi\Rune\API\Services\Text\Edit;
 
-use Liloi\BOYARD\API\Method as SuperMethod;
-use Liloi\BOYARD\Domains\Areas\Manager as AreasManager;
+use Liloi\Rune\API\Method as SuperMethod;
+use Liloi\Rune\Domains\Areas\Manager as AreasManager;
 
 class Method extends SuperMethod
 {
