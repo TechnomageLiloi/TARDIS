@@ -2,7 +2,7 @@
 
 namespace Liloi\Rune\Exceptions;
 
-class NotFoundException extends BoyardException
+class NotFoundException extends RuneException
 {
     /**
      * Exception message.

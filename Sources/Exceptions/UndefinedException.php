@@ -2,7 +2,7 @@
 
 namespace Liloi\Rune\Exceptions;
 
-class UndefinedException extends BoyardException
+class UndefinedException extends RuneException
 {
     /**
      * Exception message.

@@ -9,14 +9,14 @@ use Liloi\Judex\ExtendedException;
  *
  * @package Exceptions
  */
-class BoyardException extends ExtendedException
+class RuneException extends ExtendedException
 {
     /**
      * Exception message.
      *
      * @var string
      */
-    protected $defaultMessage = 'General Boyard exception.';
+    protected $defaultMessage = 'General Rune exception.';
 
     /**
      * Exception code.
