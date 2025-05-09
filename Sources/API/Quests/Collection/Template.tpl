@@ -2,7 +2,7 @@
 <div id="quests-collection" class="stylo">
     <table>
         <tr>
-            <th>UID</th>
+            <th style="width: 200px;">Quest Unique Identifier</th>
             <th>Status</th>
             <th>Goal/Data</th>
             <th>Actions</th>
