@@ -17,5 +17,13 @@ use Liloi\Stylo\Parser;
  */
 class Entity extends AbstractEntity
 {
+    public function getKey(): string
+    {
+        return $this->getField('key_quest');
+    }
 
+    public function getStatusTitle(): string
+    {
+        return Statuses::$list[$this->getStatus()];
+    }
 }

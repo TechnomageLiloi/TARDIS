@@ -21,16 +21,28 @@ class Manager extends DomainManager
     {
         $name = self::getTableName();
 
+        $prefix = date('Y-W-');
         $rows = self::getAdapter()->getArray(sprintf(
-            'select * from %s where key_quest like "%s-%%" order by key_quest desc;',
-            $name, date('Y-W')
+            'select * from %s where key_quest like "%s%%" order by key_quest asc;',
+            $name, $prefix
         ));
 
         $collection = new Collection();
 
+        if(!$rows)
+        {
+            for($num=1;$num<=7;$num++)
+            {
+                $key = $prefix . $num;
+                $collection[$key] = self::create($key);
+            }
+
+            return $collection;
+        }
+
         foreach($rows as $row)
         {
-            $collection[] = Entity::create($row);
+            $collection[$row['key_quest']] = Entity::create($row);
         }
 
         return $collection;
