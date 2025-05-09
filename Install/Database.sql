@@ -26,3 +26,14 @@ create table quests
 		primary key (key_quest)
 );
 
+create table stones
+(
+    key_stone timestamp not null,
+    key_quest varchar(9) null,
+    title varchar(100) not null,
+    constraint stones_pk
+        primary key (key_stone),
+    constraint stones_quest_key_quest_fk
+        foreign key (key_quest) references quests (key_quest)
+            on update cascade on delete cascade
+);
