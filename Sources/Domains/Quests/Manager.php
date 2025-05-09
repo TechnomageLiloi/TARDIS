@@ -51,22 +51,22 @@ class Manager extends DomainManager
     /**
      * Load problem from database.
      *
-     * @param string $keyRoad
+     * @param string $keyQuest
      * @return Entity
      */
-    public static function load(string $keyRoad): Entity
+    public static function load(string $keyQuest): Entity
     {
         $name = self::getTableName();
 
         $row = self::getAdapter()->getRow(sprintf(
             'select * from %s where key_quest="%s"',
             $name,
-            $keyRoad
+            $keyQuest
         ));
 
         if(empty($row))
         {
-            return self::create($keyRoad);
+            return self::create($keyQuest);
         }
 
         return Entity::create($row);
