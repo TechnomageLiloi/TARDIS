@@ -82,12 +82,12 @@ class Manager extends DomainManager
         $name = self::getTableName();
         $data = $entity->get();
 
-        $RID = $data['key_quest'];
+        $keyQuest = $data['key_quest'];
 
         self::update(
             $name,
             $data,
-            sprintf('key_quest = "%s"', $RID)
+            sprintf('key_quest = "%s"', $keyQuest)
         );
     }
 

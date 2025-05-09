@@ -19,5 +19,26 @@ Requests.Quests = {
         }, function () {
 
         });
+    },
+
+    save: function (keyQuest)
+    {
+        if(!confirm('Are you sure?'))
+        {
+            return;
+        }
+
+        const jq_block = $('#quests-edit');
+
+        API.request('Quests.Save', {
+            'keyQuest': keyQuest,
+            'goal': jq_block.find('[name="goal"]').val(),
+            'status': jq_block.find('[name="status"]').val(),
+            'data': jq_block.find('[name="data"]').val()
+        }, function (data) {
+            Requests.Quests.getCollection();
+        }, function () {
+
+        });
     }
 }

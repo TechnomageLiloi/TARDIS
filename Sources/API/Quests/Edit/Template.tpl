@@ -21,9 +21,9 @@
             </td>
         </tr>
         <tr>
-            <td>Dta</td>
+            <td>Data</td>
             <td>
-                <input name="data" type="text" value="<?php echo $quest->getData(); ?>" />
+                <textarea name="data"><?php echo $quest->getData(); ?></textarea>
             </td>
         </tr>
     </table>
