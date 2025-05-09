@@ -19,6 +19,7 @@
         <div style="text-align: center;">
             <a class="butn" href="javascript:void(0)" onclick="window.location.reload();">Refresh</a>
             <a class="butn" href="javascript:void(0)" onclick="$('#items').toggle();">Items</a>
+            <a class="butn" href="javascript:void(0)" onclick="Requests.Quests.getCollection();">Quests</a>
 
             <!--
             <a class="butn" href="javascript:void(0)" onclick="Requests.Services.Text.edit();">Test</a>

@@ -2,8 +2,8 @@
 
 namespace Liloi\Rune\Domains\Stones;
 
-use Liloi\TARDIS\Domains\Manager as DomainManager;
-use Liloi\TARDIS\Application;
+use Liloi\Rune\Domains\Manager as DomainManager;
+use Liloi\Rune\Application;
 
 class Manager extends DomainManager
 {

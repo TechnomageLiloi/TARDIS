@@ -4,7 +4,7 @@ Requests.Quests = {
         API.request('Quests.Collection', {
             'debug': false
         }, function (data) {
-            $('#layout').html(data.render);
+            $('#page').html(data.render);
         }, function () {
 
         });
@@ -15,7 +15,7 @@ Requests.Quests = {
         API.request('Quests.Show', {
             debug: false
         }, function (data) {
-            $('#layout').html(data.render);
+            $('#page').html(data.render);
         }, function () {
 
         });
