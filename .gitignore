@@ -1,3 +1,5 @@
 /vendor/
 /composer.lock
 /Builder/TARDIS.phar
+/Config/Private.Battle.json
+/Config/Private.json
