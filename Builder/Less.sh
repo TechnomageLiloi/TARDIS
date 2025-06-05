@@ -2,5 +2,5 @@
 
 echo "Compiling LESS...";
 
-printf "\tSources/Style"; lessc ../Sources/Style.less ../Sources/Style.css; printf "\n";
+printf "\tEngine/Style"; lessc ../Engine/Style.less ../Engine/Style.css; printf "\n";
 printf "\tDone compiling LESS to CSS\n";

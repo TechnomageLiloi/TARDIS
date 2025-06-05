@@ -17,11 +17,11 @@
     <body>
         <div style="text-align: center;">
             <a class="butn" href="javascript:void(0)" onclick="window.location.reload();">Refresh</a>
-            <a class="butn" href="javascript:void(0)" onclick="Requests.Road.create();">Create</a>
+            <!--<a class="butn" href="javascript:void(0)" onclick="Requests.Road.create();">Create</a>-->
         </div>
         <hr/>
         <div id="page">
-            <script>Requests.Road.show();</script>
+            <script>//Requests.Road.show();</script>
         </div>
     </body>
 </html>
