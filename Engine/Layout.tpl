@@ -7,8 +7,8 @@
 
         <script><?php echo file_get_contents(dirname(__DIR__) . '/vendor/technomage-liloi/stylo/Source/Stylo.js'); ?></script>
 
-        <script><?php echo file_get_contents(dirname(__DIR__) . '/Sources/API/Requests.js'); ?></script>
-        <script><?php echo file_get_contents(dirname(__DIR__) . '/Sources/API/Road/Requests.js'); ?></script>
+        <script><?php echo file_get_contents(dirname(__DIR__) . '/Engine/API/Requests.js'); ?></script>
+        <script><?php echo file_get_contents(dirname(__DIR__) . '/Engine/API/Maps/Requests.js'); ?></script>
 
         <style><?php echo file_get_contents(__DIR__ . '/Style.css'); ?></style>
 
@@ -21,7 +21,7 @@
         </div>
         <hr/>
         <div id="page">
-            <script>//Requests.Road.show();</script>
+            <script>Requests.Maps.show();</script>
         </div>
     </body>
 </html>
