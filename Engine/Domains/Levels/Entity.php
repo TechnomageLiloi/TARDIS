@@ -1,6 +1,6 @@
 <?php
 
-namespace Liloi\TARDIS\Domains\Levels;
+namespace Liloi\BOYARD\Domains\Levels;
 
 use Liloi\Tools\Entity as AbstractEntity;
 use Liloi\Stylo\Parser;

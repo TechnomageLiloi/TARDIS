@@ -1,6 +1,6 @@
 <?php
 
-namespace Liloi\TARDIS\Domains\Levels;
+namespace Liloi\BOYARD\Domains\Levels;
 
 class Statuses
 {

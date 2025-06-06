@@ -1,9 +1,9 @@
 <?php
 
-namespace Liloi\TARDIS\API\Maps\Show;
+namespace Liloi\BOYARD\API\Maps\Show;
 
-use Liloi\TARDIS\API\Method as SuperMethod;
-use Liloi\TARDIS\Domains\Maps\Manager as MapsManager;
+use Liloi\BOYARD\API\Method as SuperMethod;
+use Liloi\BOYARD\Domains\Maps\Manager as MapsManager;
 
 class Method extends SuperMethod
 {

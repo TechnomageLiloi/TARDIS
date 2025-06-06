@@ -1,9 +1,9 @@
 <?php
 
-namespace Liloi\TARDIS\API\Levels\Collection;
+namespace Liloi\BOYARD\API\Levels\Collection;
 
-use Liloi\TARDIS\Domains\Levels\Manager as LevelsManager;
-use Liloi\TARDIS\API\Method as AbstractMethod;
+use Liloi\BOYARD\Domains\Levels\Manager as LevelsManager;
+use Liloi\BOYARD\API\Method as AbstractMethod;
 
 /**
  * Rune API: Blueprint.Blueprints.Show

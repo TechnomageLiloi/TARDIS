@@ -1,8 +1,8 @@
 <?php
 
-namespace Liloi\TARDIS\API\Services\Text\Edit;
+namespace Liloi\BOYARD\API\Services\Text\Edit;
 
-use Liloi\TARDIS\API\Method as SuperMethod;
+use Liloi\BOYARD\API\Method as SuperMethod;
 
 class Method extends SuperMethod
 {

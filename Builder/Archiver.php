@@ -1,6 +1,6 @@
 <?php
 echo "Archiving in PHAR...\n";
-$fnDumper = __DIR__ . '/TARDIS.phar';
+$fnDumper = __DIR__ . '/BOYARD.phar';
 
 try
 {

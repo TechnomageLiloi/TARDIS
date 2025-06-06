@@ -1,6 +1,6 @@
 <?php
 
-namespace Liloi\TARDIS\Exceptions;
+namespace Liloi\BOYARD\Exceptions;
 
 class AccessException extends GeneralException
 {
