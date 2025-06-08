@@ -1,6 +1,6 @@
 <?php
 
-namespace Liloi\BOYARD\Domains\Config;
+namespace Liloi\TARDIS\Domains\Config;
 
 class Keys
 {

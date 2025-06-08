@@ -1,8 +1,8 @@
 <?php
 
-namespace Liloi\BOYARD\Domains\Config;
+namespace Liloi\TARDIS\Domains\Config;
 
-use Liloi\BOYARD\Domains\Manager as DomainManager;
+use Liloi\TARDIS\Domains\Manager as DomainManager;
 
 class Manager extends DomainManager
 {

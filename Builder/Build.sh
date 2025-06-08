@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 echo "=-=-=-=-=-=-=-=-=-=-=";
-echo "=  Building BOYARD  =";
+echo "=  Building TARDIS  =";
 echo "=-=-=-=-=-=-=-=-=-=-=";
 
 bash Less.sh

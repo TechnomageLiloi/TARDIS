@@ -1,9 +1,9 @@
 <?php
 
-namespace Liloi\BOYARD\API\Levels\Create;
+namespace Liloi\TARDIS\API\Levels\Create;
 
-use Liloi\BOYARD\Domains\Levels\Manager;
-use Liloi\BOYARD\API\Method as AbstractMethod;
+use Liloi\TARDIS\Domains\Levels\Manager;
+use Liloi\TARDIS\API\Method as AbstractMethod;
 
 class Method extends AbstractMethod
 {

@@ -1,5 +1,5 @@
 {
-  "name": "technomage-liloi/boyard",
+  "name": "technomage-liloi/tardis",
   "license": "BSD-3-Clause",
   "description": "Interstate 60",
   "require": {
@@ -10,7 +10,7 @@
   "minimum-stability": "dev",
   "autoload": {
     "psr-4": {
-      "Liloi\\BOYARD\\": "Engine"
+      "Liloi\\TARDIS\\": "Engine"
     }
   }
 }
