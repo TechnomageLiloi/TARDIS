@@ -38,3 +38,18 @@ create table road
     constraint i60_road_pk
         primary key (key_day)
 );
+
+create table quests
+(
+    key_quest smallint unsigned not null,
+    map varchar(250) not null,
+    title varchar(250) not null,
+    program text not null,
+    status tinyint unsigned default 1 not null,
+    start timestamp not null,
+    finish timestamp not null,
+    tags varchar(100) not null,
+    data json not null,
+    constraint quests_pk
+        primary key (key_quest, map)
+);
