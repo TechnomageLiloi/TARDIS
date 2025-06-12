@@ -24,7 +24,7 @@ class Entity extends AbstractEntity
 
     public function getID(): string
     {
-        return sprintf("#%03x", $this->getKey());
+        return sprintf("%03x", $this->getKey());
     }
 
     public function parse(): string

@@ -3,6 +3,7 @@
 namespace Liloi\TARDIS\Domains\Road;
 
 use Liloi\TARDIS\Domains\Manager as DomainManager;
+use Liloi\TARDIS\Domains\Maps\Manager as MapsManager;
 
 class Manager extends DomainManager
 {
@@ -90,7 +91,7 @@ class Manager extends DomainManager
     public static function create(): Entity
     {
         $data = [
-            'map' => date('Y-m-d H:i:s'),
+            'map' => MapsManager::getMapID(),
             'program' => '-',
             'data' => '{}'
         ];

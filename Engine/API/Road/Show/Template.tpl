@@ -6,7 +6,7 @@
     </div>
     <br/>
     <div class="data">
-        <?php echo $entity->getID(); ?> -<?php echo $entity->getTs(); ?> - <?php echo $entity->getData(); ?>
+        [<?php echo $entity->getID(); ?>] <?php echo $entity->getMap(); ?> <?php echo $entity->getData(); ?>
     </div>
     <hr/>
     <?php echo $entity->parse(); ?>
