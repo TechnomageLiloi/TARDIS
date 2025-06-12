@@ -2,6 +2,8 @@
 
 <div id="maps-show" class="stylo">
     <div class="controls">
+        <div style="text-align: center;"><?php echo $map; ?></div>
+        <hr/>
         <?php echo $entity->getProgram(); ?>
         <hr/>
         <div id="items">

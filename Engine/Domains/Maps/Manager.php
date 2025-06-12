@@ -6,6 +6,18 @@ use Liloi\TARDIS\Domains\Manager as DomainManager;
 
 class Manager extends DomainManager
 {
+    public static function getMapID(): string
+    {
+        $URI = rtrim($_SERVER['REQUEST_URI'], '/');
+
+        if(empty($URI))
+        {
+            return ':';
+        }
+
+        return str_replace('/', ':', $URI);
+    }
+
     public static function getEntityByDirname(string $link): Entity
     {
         $link = rtrim($link, '/');
