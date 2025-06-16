@@ -96,12 +96,30 @@ class Manager extends DomainManager
     }
 
     /**
+     * Load next key.
+     *
+     * @return int
+     */
+    public static function getNextKey(): int
+    {
+        $name = self::getTableName();
+
+        $key = (int)self::getAdapter()->getSingle(sprintf(
+            'select key_quest from %s where map="%s" order by key_quest desc limit 1',
+            $name, MapsManager::getMapID()
+        ));
+
+        return ++$key;
+    }
+
+    /**
      * Create problem in database.
      */
     public static function create(): Entity
     {
         $name = self::getTableName();
         $data = [
+            'key_quest' => self::getNextKey(),
             'map' => MapsManager::getMapID(),
             'title' => '-',
             'program' => '-',

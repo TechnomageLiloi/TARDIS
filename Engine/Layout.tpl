@@ -25,7 +25,6 @@
             <a href="javascript:void(0)" class="butn" onclick="Requests.Levels.getCollection();">Levels</a>
             &diamondsuit;
             <a class="butn" href="javascript:void(0)" onclick="Requests.Quests.getCollection();">Quests</a>
-            <a class="butn" href="javascript:void(0)" onclick="Requests.Quests.create();">Create quest</a>
             &diamondsuit;
             <a class="butn" href="javascript:void(0)" onclick="Requests.Road.show();">Show current road</a>
             <a class="butn" href="javascript:void(0)" onclick="Requests.Road.create();">Make next step</a>

@@ -2,7 +2,7 @@
     <link href="/API/Levels/Collection/Style.css" rel="stylesheet" />
 
     <div style="text-align: center;">
-        <a href="javascript:void(0)" class="butn" onclick="Requests.Levels.create();">Create</a>
+        <a class="butn" href="javascript:void(0)" onclick="Requests.Quests.create();">Create quest</a>
     </div>
 
     <?php if($collection->count()): ?>
@@ -11,27 +11,23 @@
             <tr>
                 <th>level</th>
                 <th>Title</th>
-                <th>Goal</th>
                 <th>Status</th>
                 <th>Actions</th>
             </tr>
             <?php foreach($collection as $entity): ?>
-                <tr style="font-weight: bold;" class="levels <?php echo $entity->getStatusClass(); ?>">
+                <tr style="font-weight: bold;" class="levels">
                     <td>
-                        <?php echo $entity->getKey(); ?>
+                        <?php echo $entity->getID(); ?>
                     </td>
                     <td>
                         <?php echo $entity->getTitle(); ?>
                     </td>
                     <td>
-                        <?php echo $entity->getGoal(); ?>
-                    </td>
-                    <td>
                         <?php echo $entity->getStatusTitle(); ?>
                     </td>
                     <td>
-                        <a href="javascript:void(0)" class="butn" onclick="Requests.Levels.show('<?php echo $entity->getKey(); ?>');">Show</a> &diams;
-                        <a href="javascript:void(0)" class="butn" onclick="Requests.Levels.edit('<?php echo $entity->getKey(); ?>');">Edit</a>
+                        <a href="javascript:void(0)" class="butn" onclick="Requests.Quests.show('<?php echo $entity->getKey(); ?>');">Show</a> &diams;
+                        <a href="javascript:void(0)" class="butn" onclick="Requests.Quests.edit('<?php echo $entity->getKey(); ?>');">Edit</a>
                     </td>
                 </tr>
             <?php endforeach; ?>
