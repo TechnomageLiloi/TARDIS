@@ -3,8 +3,9 @@
     <hr/>
     <h1 style="text-align: center;"><?php echo $quest->getTitle(); ?></h1>
     <div style="text-align: center;">
-        <?php echo $quest->getUID(); ?> &diams;
+        <?php echo $quest->getID(); ?> &diams;
         <?php echo $quest->getStatusTitle(); ?> &diams;
+        <?php echo $quest->getStart(); ?> &diams;
         <?php echo $quest->getStart(); ?> &diams;
         <?php echo $quest->getTags(); ?> &diams;
         <?php echo $quest->getData(); ?>

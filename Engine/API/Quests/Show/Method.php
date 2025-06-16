@@ -9,7 +9,7 @@ class Method extends SuperMethod
 {
     public function execute(): array
     {
-        $quest = QuestsManager::loadCurrent();
+        $quest = QuestsManager::load($_POST['parameters']['keyQuest']);
 
         return [
             'render' => $this->render(__DIR__ . '/Template.tpl', [

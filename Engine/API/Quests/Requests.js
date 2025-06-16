@@ -10,10 +10,10 @@ Requests.Quests = {
         });
     },
 
-    show: function ()
+    show: function (keyQuest)
     {
         API.request('Quests.Show', {
-            'debug': false
+            'keyQuest': keyQuest
         }, function (data) {
             $('#page').html(data.render);
         }, function () {
