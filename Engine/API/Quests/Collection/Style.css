@@ -1,0 +1,12 @@
+#modules-levels-collection table {
+  width: 100%;
+}
+#modules-levels-collection table tr.defended-level {
+  color: green;
+}
+#modules-levels-collection table tr.defending-now-level {
+  color: orange;
+}
+#modules-levels-collection table tr.not-defended-level {
+  color: red;
+}

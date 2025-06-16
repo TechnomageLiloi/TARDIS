@@ -20,11 +20,15 @@
     </head>
     <body>
         <div style="text-align: center;">
-            <a class="butn" href="javascript:void(0)" onclick="window.location.reload();">Refresh</a>
+            <a class="butn" href="javascript:void(0)" onclick="window.location.reload();">Map</a>
+            &diamondsuit;
             <a href="javascript:void(0)" class="butn" onclick="Requests.Levels.getCollection();">Levels</a>
             &diamondsuit;
-            <a class="butn" href="javascript:void(0)" onclick="Requests.Road.show();">Show</a>
-            <a class="butn" href="javascript:void(0)" onclick="Requests.Road.create();">Create</a>
+            <a class="butn" href="javascript:void(0)" onclick="Requests.Quests.getCollection();">Quests</a>
+            <a class="butn" href="javascript:void(0)" onclick="Requests.Quests.create();">Create quest</a>
+            &diamondsuit;
+            <a class="butn" href="javascript:void(0)" onclick="Requests.Road.show();">Show current road</a>
+            <a class="butn" href="javascript:void(0)" onclick="Requests.Road.create();">Make next step</a>
         </div>
         <hr/>
         <div id="page">

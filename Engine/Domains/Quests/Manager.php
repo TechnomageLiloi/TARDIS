@@ -3,7 +3,7 @@
 namespace Liloi\TARDIS\Domains\Quests;
 
 use Liloi\TARDIS\Domains\Manager as DomainManager;
-use Liloi\TARDIS\Application;
+use Liloi\TARDIS\Domains\Maps\Manager as MapsManager;
 
 class Manager extends DomainManager
 {
@@ -21,10 +21,9 @@ class Manager extends DomainManager
     {
         $name = self::getTableName();
 
-        $prefix = date('Y-W-');
         $rows = self::getAdapter()->getArray(sprintf(
-            'select * from %s where key_quest like "%s%%" order by key_quest asc;',
-            $name, $prefix
+            'select * from %s where map="%s" order by key_quest desc;',
+            $name, MapsManager::getMapID()
         ));
 
         $collection = new Collection();
@@ -103,6 +102,7 @@ class Manager extends DomainManager
     {
         $name = self::getTableName();
         $data = [
+            'map' => MapsManager::getMapID(),
             'title' => '-',
             'program' => '-',
             'status' => Statuses::TODO,
