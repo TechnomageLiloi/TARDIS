@@ -21,10 +21,10 @@ Requests.Quests = {
         });
     },
 
-    edit: function ()
+    edit: function (keyQuest)
     {
         API.request('Quests.Edit', {
-            'debug': false
+            'keyQuest': keyQuest
         }, function (data) {
             $('#page').html(data.render);
         }, function () {
@@ -32,7 +32,7 @@ Requests.Quests = {
         });
     },
 
-    save: function ()
+    save: function (keyQuest)
     {
         if(!confirm('Are you sure?'))
         {
@@ -42,14 +42,16 @@ Requests.Quests = {
         const jq_block = $('#quests-edit');
 
         API.request('Quests.Save', {
+            'keyQuest': keyQuest,
             'title': jq_block.find('[name="title"]').val(),
             'program': jq_block.find('[name="program"]').val(),
             'status': jq_block.find('[name="status"]').val(),
             'start': jq_block.find('[name="start"]').val(),
+            'finish': jq_block.find('[name="finish"]').val(),
             'tags': jq_block.find('[name="tags"]').val(),
             'data': jq_block.find('[name="data"]').val()
         }, function (data) {
-            Requests.Quests.show();
+            Requests.Quests.getCollection();
         }, function () {
 
         });

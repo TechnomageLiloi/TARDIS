@@ -4,6 +4,7 @@ namespace Liloi\TARDIS\Domains\Quests;
 
 use Liloi\TARDIS\Domains\Manager as DomainManager;
 use Liloi\TARDIS\Domains\Maps\Manager as MapsManager;
+use Liloi\TARDIS\Exceptions\NotFoundException;
 
 class Manager extends DomainManager
 {
@@ -47,14 +48,13 @@ class Manager extends DomainManager
         $name = self::getTableName();
 
         $row = self::getAdapter()->getRow(sprintf(
-            'select * from %s where key_quest="%s"',
-            $name,
-            $keyQuest
+            'select * from %s where map="%s" and key_quest="%s"',
+            $name, MapsManager::getMapID(), $keyQuest
         ));
 
         if(empty($row))
         {
-            return self::create($keyQuest);
+            throw new NotFoundException();
         }
 
         return Entity::create($row);
@@ -91,7 +91,7 @@ class Manager extends DomainManager
         self::update(
             $name,
             $data,
-            sprintf('key_quest = "%s"', $keyQuest)
+            sprintf('key_quest = "%s" and map="%s"', $keyQuest, MapsManager::getMapID())
         );
     }
 

@@ -9,7 +9,7 @@ class Method extends SuperMethod
 {
     public function execute(): array
     {
-        $quest = QuestsManager::loadCurrent();
+        $quest = QuestsManager::load($_POST['parameters']['keyQuest']);
 
         $quest->setTitle($_POST['parameters']['title']);
         $quest->setProgram($_POST['parameters']['program']);

@@ -1,7 +1,7 @@
 <link href="/API/Quests/Show/Style.css" rel="stylesheet" />
 <div id="quests-edit" class="stylo">
 
-    <a href="javascript:void(0)" class="butn" onclick="Requests.Quests.save();">Save</a>
+    <a href="javascript:void(0)" class="butn" onclick="Requests.Quests.save('<?php echo $quest->getKey(); ?>');">Save</a>
 
     <table>
         <tr>
@@ -30,6 +30,12 @@
             <td>Start</td>
             <td>
                 <input name="start" type="text" value="<?php echo $quest->getStart(); ?>" />
+            </td>
+        </tr>
+        <tr>
+            <td>Finish</td>
+            <td>
+                <input name="finish" type="text" value="<?php echo $quest->getFinish(); ?>" />
             </td>
         </tr>
         <tr>
