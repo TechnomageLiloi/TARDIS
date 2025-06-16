@@ -6,6 +6,9 @@ use Liloi\Tools\Entity as AbstractEntity;
 use Liloi\Stylo\Parser as StyloParser;
 
 /**
+ * @method string getMap()
+ * @method void setMap(string $value)
+ *
  * @method string getTitle()
  * @method void setTitle(string $value)
  *
@@ -17,6 +20,9 @@ use Liloi\Stylo\Parser as StyloParser;
  *
  * @method string getStart()
  * @method void setStart(string $value)
+ *
+ * @method string getFinish()
+ * @method void setFinish(string $value)
  *
  * @method string getTags()
  * @method void setTags(string $value)
@@ -31,10 +37,9 @@ class Entity extends AbstractEntity
         return $this->getField('key_quest');
     }
 
-    public function getUID(): string
+    public function getID(): string
     {
-        $key = $this->getKey();
-        return sprintf('[.%02s.%01s]', (int)($key / 10), $key % 10);
+        return sprintf("%s:%03x", $this->getMap(), $this->getKey());
     }
 
     public function getStatusTitle(): string

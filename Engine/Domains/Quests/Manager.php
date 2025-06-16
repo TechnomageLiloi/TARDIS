@@ -107,6 +107,7 @@ class Manager extends DomainManager
             'program' => '-',
             'status' => Statuses::TODO,
             'start' => date('Y-m-d H:i:s'),
+            'finish' => date('Y-m-d H:i:s'),
             'tags' => '-',
             'data' => '{}'
         ];
