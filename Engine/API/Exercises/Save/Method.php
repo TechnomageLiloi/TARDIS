@@ -14,10 +14,8 @@ class Method extends SuperMethod
         $quest->setTitle($_POST['parameters']['title']);
         $quest->setProgram($_POST['parameters']['program']);
         $quest->setStatus($_POST['parameters']['status']);
-        $quest->setStart($_POST['parameters']['start']);
-        $quest->setFinish($_POST['parameters']['finish']);
-        $quest->setTags($_POST['parameters']['tags']);
-        $quest->setData($_POST['parameters']['data']);
+        $quest->setType($_POST['parameters']['type']);
+        $quest->setTheory($_POST['parameters']['theory']);
 
         $quest->save();
 

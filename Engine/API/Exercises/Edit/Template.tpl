@@ -27,27 +27,15 @@
             </td>
         </tr>
         <tr>
-            <td>Start</td>
+            <td>Type</td>
             <td>
-                <input name="start" type="text" value="<?php echo $quest->getStart(); ?>" />
+                <input name="type" type="text" value="<?php echo $quest->getType(); ?>" />
             </td>
         </tr>
         <tr>
-            <td>Finish</td>
+            <td>Theory</td>
             <td>
-                <input name="finish" type="text" value="<?php echo $quest->getFinish(); ?>" />
-            </td>
-        </tr>
-        <tr>
-            <td>Tags</td>
-            <td>
-                <input name="tags" type="text" value="<?php echo $quest->getTags(); ?>" />
-            </td>
-        </tr>
-        <tr>
-            <td>Data</td>
-            <td>
-                <textarea name="data"><?php echo $quest->getData(); ?></textarea>
+                <textarea name="theory"><?php echo $quest->getData(); ?></textarea>
             </td>
         </tr>
     </table>

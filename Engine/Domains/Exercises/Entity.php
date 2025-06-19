@@ -18,17 +18,11 @@ use Liloi\Stylo\Parser as StyloParser;
  * @method string getStatus()
  * @method void setStatus(string $value)
  *
- * @method string getStart()
- * @method void setStart(string $value)
+ * @method string getType()
+ * @method void setType(string $value)
  *
- * @method string getFinish()
- * @method void setFinish(string $value)
- *
- * @method string getTags()
- * @method void setTags(string $value)
- *
- * @method string getData()
- * @method void setData(string $value)
+ * @method string getTheory()
+ * @method void setTheory(string $value)
  */
 class Entity extends AbstractEntity
 {
