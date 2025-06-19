@@ -2,7 +2,7 @@
     <link href="/API/Levels/Collection/Style.css" rel="stylesheet" />
 
     <div style="text-align: center;">
-        <a class="butn" href="javascript:void(0)" onclick="Requests.Exercises.create();">Create quest</a>
+        <a class="butn" href="javascript:void(0)" onclick="Requests.Exercises.create();">Create exercise</a>
     </div>
 
     <?php if($collection->count()): ?>

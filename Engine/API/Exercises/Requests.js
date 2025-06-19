@@ -65,7 +65,7 @@ Requests.Exercises = {
         API.request('Exercises.Create', {
             'debug': false
         }, function (data) {
-            Requests.Exercises.show();
+            Requests.Exercises.getCollection();
         }, function () {
 
         });

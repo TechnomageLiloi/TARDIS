@@ -67,7 +67,7 @@ Requests.Quests = {
         API.request('Quests.Create', {
             'debug': false
         }, function (data) {
-            Requests.Quests.show();
+            Requests.Quests.getCollection();
         }, function () {
 
         });
