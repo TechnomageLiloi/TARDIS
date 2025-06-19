@@ -41,6 +41,11 @@ class Entity extends AbstractEntity
         return Statuses::$list[$this->getStatus()];
     }
 
+    public function getTypeTitle(): string
+    {
+        return Types::$list[$this->getType()];
+    }
+
     public function getProgramParse(): string
     {
         return StyloParser::parseString($this->getProgram());

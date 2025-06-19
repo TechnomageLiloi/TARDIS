@@ -9,15 +9,15 @@ class Method extends SuperMethod
 {
     public function execute(): array
     {
-        $quest = ExercisesManager::load($_POST['parameters']['keyQuest']);
+        $exercise = ExercisesManager::load($_POST['parameters']['key_exercise']);
 
-        $quest->setTitle($_POST['parameters']['title']);
-        $quest->setProgram($_POST['parameters']['program']);
-        $quest->setStatus($_POST['parameters']['status']);
-        $quest->setType($_POST['parameters']['type']);
-        $quest->setTheory($_POST['parameters']['theory']);
+        $exercise->setTitle($_POST['parameters']['title']);
+        $exercise->setProgram($_POST['parameters']['program']);
+        $exercise->setStatus($_POST['parameters']['status']);
+        $exercise->setType($_POST['parameters']['type']);
+        $exercise->setTheory($_POST['parameters']['theory']);
 
-        $quest->save();
+        $exercise->save();
 
         return [];
     }
