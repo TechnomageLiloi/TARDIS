@@ -30,7 +30,7 @@
                         <?php echo $entity->getTypeTitle(); ?>
                     </td>
                     <td>
-                        <a href="javascript:void(0)" class="butn" onclick="Requests.Exercises.show('<?php echo $entity->getKey(); ?>');">Show</a>
+                        <a href="javascript:void(0)" class="butn" onclick="Requests.Exercises.show('<?php echo $entity->getKey(); ?>');">Test</a>
                         <a href="javascript:void(0)" class="butn" onclick="Requests.Exercises.edit('<?php echo $entity->getKey(); ?>');">Edit</a>
                     </td>
                 </tr>

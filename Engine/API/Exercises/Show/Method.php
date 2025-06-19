@@ -9,11 +9,11 @@ class Method extends SuperMethod
 {
     public function execute(): array
     {
-        $quest = ExercisesManager::load($_POST['parameters']['keyQuest']);
+        $exercise = ExercisesManager::load($_POST['parameters']['key_exercise']);
 
         return [
             'render' => $this->render(__DIR__ . '/Template.tpl', [
-                'quest' => $quest
+                'entity' => $exercise
             ])
         ];
     }

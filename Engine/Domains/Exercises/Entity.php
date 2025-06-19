@@ -26,6 +26,8 @@ use Liloi\Stylo\Parser as StyloParser;
  */
 class Entity extends AbstractEntity
 {
+    private array $program = [];
+
     public function getKey(): string
     {
         return $this->getField('key_exercise');
@@ -46,13 +48,44 @@ class Entity extends AbstractEntity
         return Types::$list[$this->getType()];
     }
 
-    public function getProgramParse(): string
-    {
-        return StyloParser::parseString($this->getProgram());
-    }
-
     public function save(): void
     {
         Manager::save($this);
+    }
+
+    public function getProgramList(): array
+    {
+        if(empty($this->program))
+        {
+            $this->program = (array)json_decode($this->getProgram(), true);
+        }
+
+        return $this->program;
+    }
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    public function parseQuestion(): string
+    {
+        $program = $this->getProgramList();
+
+        if(!array_key_exists('question', $program))
+        {
+            return 'No question';
+        }
+
+        return $program['question'];
+    }
+
+    public function parseAnswer(): string
+    {
+        $program = $this->getProgramList();
+
+        if(!array_key_exists('answer', $program))
+        {
+            return 'No answer';
+        }
+
+        return $program['answer'];
     }
 }
