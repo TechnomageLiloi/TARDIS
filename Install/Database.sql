@@ -53,3 +53,16 @@ create table quests
     constraint quests_pk
         primary key (key_quest, map)
 );
+
+create table exercises
+(
+    key_exercise smallint unsigned not null,
+    map varchar(250) not null,
+    title varchar(250) not null,
+    status tinyint unsigned default 1 not null,
+    type tinyint unsigned default 1 not null,
+    program json not null,
+    theory text not null,
+    constraint exercises_pk
+        primary key (key_exercise, map)
+);
