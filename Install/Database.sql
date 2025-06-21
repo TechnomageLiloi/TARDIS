@@ -66,3 +66,17 @@ create table exercises
     constraint exercises_pk
         primary key (key_exercise, map)
 );
+
+create table tickets
+(
+    key_ticket timestamp not null,
+    key_day bigint unsigned not null,
+    title varchar(100) not null,
+    status tinyint unsigned default 1 not null,
+    constraint tickets_pk
+        primary key (key_ticket),
+    constraint tickets_road_key_day_fk
+        foreign key (key_day) references road (key_day)
+            on update cascade on delete cascade
+);
+
