@@ -1,0 +1,48 @@
+Requests.Tickets = {
+    create: function ()
+    {
+        if(!confirm('Are you sure?'))
+        {
+            return;
+        }
+
+        API.request('Tickets.Create', {
+            'debug': true
+        }, function (data) {
+            //Requests.Levels.getCollection();
+        }, function () {
+
+        });
+    },
+
+
+    edit: function (key_ticket)
+    {
+        API.request('Tickets.Edit', {
+            'key_ticket': key_ticket
+        }, function (data) {
+            $('#page').html(data.render);
+        }, function () {
+
+        });
+    },
+
+    save: function (key_ticket)
+    {
+        if(!confirm('Are you sure?'))
+        {
+            return;
+        }
+
+        const jq_block = $('#ticket-edit');
+        API.request('Tickets.Save', {
+            'key_ticket': key_ticket,
+            'title': jq_block.find('[name="title"]').val(),
+            'status': jq_block.find('[name="status"]').val()
+        }, function (data) {
+            //Requests.Levels.getCollection();
+        }, function () {
+
+        });
+    }
+}
