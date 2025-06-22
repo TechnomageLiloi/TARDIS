@@ -40,7 +40,7 @@ Requests.Tickets = {
             'title': jq_block.find('[name="title"]').val(),
             'status': jq_block.find('[name="status"]').val()
         }, function (data) {
-            //Requests.Levels.getCollection();
+            Requests.Road.show();
         }, function () {
 
         });
