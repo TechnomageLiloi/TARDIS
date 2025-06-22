@@ -12,4 +12,17 @@
     </div>
     <hr/>
     <?php echo $entity->parse(); ?>
+    <hr/>
+    <table>
+        <tr>
+            <th>Title</th>
+            <th>Status</th>
+        </tr>
+    <?php foreach($tickets as $ticket): ?>
+        <tr>
+            <td><?php echo $ticket->getTitle(); ?></td>
+            <td><?php echo $ticket->getStatusTitle(); ?></td>
+        </tr>
+    <?php endforeach; ?>
+    </table>
 </div>

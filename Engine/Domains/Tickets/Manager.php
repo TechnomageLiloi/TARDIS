@@ -16,13 +16,13 @@ class Manager extends DomainManager
         return self::getTablePrefix() . 'tickets';
     }
 
-    public static function loadCollection(): Collection
+    public static function loadCollection(string $keyDay): Collection
     {
         $name = self::getTableName();
 
         $rows = self::getAdapter()->getArray(sprintf(
-            'select * from %s order by key_ticket asc;',
-            $name
+            'select * from %s where key_day="%s" order by key_ticket desc;',
+            $name, $keyDay
         ));
 
         $collection = new Collection();
@@ -72,7 +72,7 @@ class Manager extends DomainManager
             'key_ticket' => date('Y-m-d H:i:s'),
             'key_day' => $keyDay,
             'title' => 'Enter the title',
-            'status' => Statuses::IN_HAND
+            'status' => Statuses::TODO
         ]);
     }
 }

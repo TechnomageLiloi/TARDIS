@@ -9,7 +9,7 @@ Requests.Tickets = {
         API.request('Tickets.Create', {
             'key_day': key_day
         }, function (data) {
-            //Requests.Levels.getCollection();
+            Requests.Road.show();
         }, function () {
 
         });

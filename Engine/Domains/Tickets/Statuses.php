@@ -4,11 +4,13 @@ namespace Liloi\TARDIS\Domains\Tickets;
 
 class Statuses
 {
-    public const IN_HAND = 1;
-    public const SUCCESS = 2;
-    public const FAILURE = 3;
+    public const TODO = 1;
+    public const IN_HAND = 2;
+    public const SUCCESS = 3;
+    public const FAILURE = 4;
 
     public static $list = [
+        self::TODO => 'To Do',
         self::IN_HAND => 'In hand',
         self::SUCCESS => 'Success',
         self::FAILURE => 'Failure',
