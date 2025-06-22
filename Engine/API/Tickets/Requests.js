@@ -1,5 +1,5 @@
 Requests.Tickets = {
-    create: function ()
+    create: function (key_day)
     {
         if(!confirm('Are you sure?'))
         {
@@ -7,7 +7,7 @@ Requests.Tickets = {
         }
 
         API.request('Tickets.Create', {
-            'debug': true
+            'key_day': key_day
         }, function (data) {
             //Requests.Levels.getCollection();
         }, function () {

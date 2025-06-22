@@ -69,6 +69,7 @@ class Manager extends DomainManager
     {
         $name = self::getTableName();
         self::getAdapter()->insert($name, [
+            'key_ticket' => date('Y-m-d H:i:s'),
             'key_day' => $keyDay,
             'title' => 'Enter the title',
             'status' => Statuses::IN_HAND
