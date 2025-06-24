@@ -1,6 +1,6 @@
 <?php
 
-namespace Liloi\TARDIS\API\Euphoria\Show;
+namespace Liloi\TARDIS\API\Euphoria\Edit;
 
 use Liloi\TARDIS\Domains\Euphoria\Manager as EuphoriaManager;
 use Liloi\TARDIS\API\Method as AbstractMethod;
