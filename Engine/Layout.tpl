@@ -15,6 +15,7 @@
         <script><?php echo file_get_contents(dirname(__DIR__) . '/Engine/API/Quests/Requests.js'); ?></script>
         <script><?php echo file_get_contents(dirname(__DIR__) . '/Engine/API/Exercises/Requests.js'); ?></script>
         <script><?php echo file_get_contents(dirname(__DIR__) . '/Engine/API/Tickets/Requests.js'); ?></script>
+        <script><?php echo file_get_contents(dirname(__DIR__) . '/Engine/API/Euphoria/Requests.js'); ?></script>
 
         <style><?php echo file_get_contents(__DIR__ . '/Style.css'); ?></style>
 
@@ -27,6 +28,7 @@
             <a href="javascript:void(0)" class="butn" onclick="Requests.Levels.getCollection();">Levels</a>
             <a class="butn" href="javascript:void(0)" onclick="Requests.Quests.getCollection();">Quests</a>
             <a class="butn" href="javascript:void(0)" onclick="Requests.Exercises.getCollection();">Exercises</a>
+            <a href="javascript:void(0)" class="butn" onclick="Requests.Euphoria.show();">Euphorias</a>
             &diamondsuit;
             <a class="butn" href="javascript:void(0)" onclick="Requests.Road.show();">Show current road</a>
             <a class="butn" href="javascript:void(0)" onclick="Requests.Road.create();">Make next step</a>

@@ -4,7 +4,7 @@ Requests.Euphoria = {
         API.request('Euphoria.Show', {
             'debug': true
         }, function (data) {
-            $('#layout').html(data.render);
+            $('#page').html(data.render);
         }, function () {
 
         });
@@ -15,7 +15,7 @@ Requests.Euphoria = {
         API.request('Euphoria.Edit', {
             'key': key
         }, function (data) {
-            $('#layout').html(data.render);
+            $('#page').html(data.render);
         }, function () {
 
         });

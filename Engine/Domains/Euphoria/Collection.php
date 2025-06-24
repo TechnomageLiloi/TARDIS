@@ -13,6 +13,11 @@ class Collection extends AbstractCollection
 {
     public function getPeriod(): string
     {
+        if(!$this->count())
+        {
+            return 'Add at least one euphoria record.';
+        }
+
         $date1 = new \DateTime(date('Y-m-d H:i:s'));
         $date2 = new \DateTime($this[0]->getDt());
         $interval = $date1->diff($date2);

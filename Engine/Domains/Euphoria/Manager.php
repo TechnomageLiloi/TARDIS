@@ -2,7 +2,7 @@
 
 namespace Liloi\TARDIS\Domains\Euphoria;
 
-use Liloi\Euphoria\Domains\Manager as DomainManager;
+use Liloi\TARDIS\Domains\Manager as DomainManager;
 
 class Manager extends DomainManager
 {

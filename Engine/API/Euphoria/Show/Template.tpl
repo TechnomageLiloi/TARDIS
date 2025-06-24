@@ -1,3 +1,7 @@
+<div id="menu">
+
+    <a href="javascript:void(0)" class="butn" onclick="Requests.create();">Create euphoria record</a>
+</div>
 <div id="show" style="text-align: center;">
 
     <h3>Period: <?php echo $collection->getPeriod(); ?></h3>
