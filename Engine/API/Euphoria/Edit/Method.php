@@ -12,7 +12,7 @@ class Method extends AbstractMethod
         $entity = EuphoriaManager::load($_POST['parameters']['key']);
 
         return [
-            'render' => $this->render(__DIR__ . '/Edit.tpl', [
+            'render' => $this->render(__DIR__ . '/Template.tpl', [
                 'entity' => $entity
             ])
         ];

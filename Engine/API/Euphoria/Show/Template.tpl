@@ -1,6 +1,6 @@
 <div id="menu">
 
-    <a href="javascript:void(0)" class="butn" onclick="Requests.create();">Create euphoria record</a>
+    <a href="javascript:void(0)" class="butn" onclick="Requests.Euphoria.create();">Create euphoria record</a>
 </div>
 <div id="show" style="text-align: center;">
 
@@ -24,7 +24,7 @@
             </td>
             <td><?php echo $entity->getPrice(); ?></td>
             <td style="text-align: right;">
-                <a href="javascript:void(0)" class="butn" onclick="Requests.edit('<?php echo $entity->getKey(); ?>');">Edit</a>
+                <a href="javascript:void(0)" class="butn" onclick="Requests.Euphoria.edit('<?php echo $entity->getKey(); ?>');">Edit</a>
             </td>
         </tr>
         <?php endforeach; ?>
