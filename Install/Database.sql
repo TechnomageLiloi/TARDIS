@@ -80,3 +80,15 @@ create table tickets
             on update cascade on delete cascade
 );
 
+create table euphoria
+(
+    key_euphoria bigint unsigned auto_increment,
+    title varchar(100) not null,
+    dt timestamp not null,
+    summary text not null,
+    data json not null,
+    price smallint unsigned default 0 not null,
+    constraint euphoria_pk
+        primary key (key_euphoria)
+);
+
