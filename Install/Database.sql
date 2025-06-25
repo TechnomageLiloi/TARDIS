@@ -29,13 +29,22 @@ create table levels
 
 insert into levels VALUES (1, 'Teacher', 1, '-', '-');
 
+create table milestones
+(
+    key_milestone bigint unsigned auto_increment,
+    program text not null,
+    data json not null,
+    constraint milestones_pk
+        primary key (key_milestone)
+);
+
 create table road
 (
     key_day bigint unsigned auto_increment,
     map varchar(250) not null,
     program text not null,
     data json not null,
-    constraint i60_road_pk
+    constraint road_pk
         primary key (key_day)
 );
 
