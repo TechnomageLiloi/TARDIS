@@ -38,7 +38,9 @@ Requests.Tickets = {
         API.request('Tickets.Save', {
             'key_ticket': key_ticket,
             'title': jq_block.find('[name="title"]').val(),
-            'status': jq_block.find('[name="status"]').val()
+            'status': jq_block.find('[name="status"]').val(),
+            'data': jq_block.find('[name=data]').val(),
+            'program': jq_block.find('[name=program]').val()
         }, function (data) {
             Requests.Schedule.show();
         }, function () {

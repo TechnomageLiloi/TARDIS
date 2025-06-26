@@ -29,6 +29,9 @@
                 <?php endforeach; ?>
             </select>
         </td></tr>
+
+        <tr><td>Program</td><td><textarea name="program"><?php echo $entity->getProgram(); ?></textarea></td></tr>
+        <tr><td>Data</td><td><textarea name="data"><?php echo $entity->getData(); ?></textarea></td></tr>
     </table>
     <hr/>
     <a href="javascript:void(0)" onclick="Requests.Tickets.save('<?php echo $entity->getKey(); ?>');">Save</a>
