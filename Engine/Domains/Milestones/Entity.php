@@ -19,7 +19,7 @@ class Entity extends AbstractEntity
 {
     public function getKey(): string
     {
-        return $this->getField('key_day');
+        return $this->getField('key_milestone');
     }
 
     public function getID(): string
