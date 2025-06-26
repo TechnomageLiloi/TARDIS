@@ -31,8 +31,7 @@
             <a class="butn" href="javascript:void(0)" onclick="Requests.Exercises.getCollection();">Exercises</a>
             <a href="javascript:void(0)" class="butn" onclick="Requests.Euphoria.show();">Euphorias</a>
             &diamondsuit;
-            <a class="butn" href="javascript:void(0)" onclick="Requests.Milestones.show();">Show milestone</a>
-            <a class="butn" href="javascript:void(0)" onclick="Requests.Milestones.create();">Make next step</a>
+            <a class="butn" href="javascript:void(0)" onclick="Requests.Milestones.show();">Milestone</a>
             &diamondsuit;
             <a class="butn" href="javascript:void(0)" onclick="Requests.Road.show();">Show current road</a>
             <a class="butn" href="javascript:void(0)" onclick="Requests.Road.create();">Make next step</a>

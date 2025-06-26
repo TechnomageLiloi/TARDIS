@@ -26,10 +26,10 @@ Requests.Milestones = {
         });
     },
 
-    edit: function (key_day)
+    edit: function (key_milestone)
     {
         API.request('Milestones.Edit', {
-            key_day: key_day
+            key_milestone: key_milestone
         }, function (data) {
             const wrap = $('#page');
             wrap.html(data.render);
@@ -39,7 +39,7 @@ Requests.Milestones = {
         });
     },
 
-    save: function (key_day)
+    save: function (key_milestone)
     {
         if(!confirm('Are you sure?'))
         {
@@ -48,7 +48,7 @@ Requests.Milestones = {
 
         const jq_block = $('#application-diary-edit');
         API.request('Milestones.Save', {
-            key_day: key_day,
+            key_milestone: key_milestone,
             data: jq_block.find('[name=data]').val(),
             program: jq_block.find('[name=program]').val()
         }, function (data) {

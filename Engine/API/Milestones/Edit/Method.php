@@ -12,7 +12,7 @@ class Method extends SuperMethod
 {
     public function execute(): array
     {
-        $entity = DiaryManager::load($_POST['parameters']['key_day']);
+        $entity = DiaryManager::load($_POST['parameters']['key_milestone']);
 
         return [
             'render' => $this->render(__DIR__ . '/Template.tpl', [
