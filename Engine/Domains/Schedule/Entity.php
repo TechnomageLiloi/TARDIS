@@ -1,14 +1,11 @@
 <?php
 
-namespace Liloi\TARDIS\Domains\Road;
+namespace Liloi\TARDIS\Domains\Schedule;
 
 use Liloi\Stylo\Parser;
 use Liloi\Tools\Entity as AbstractEntity;
 
 /**
- * @method string getMap()
- * @method void setMap(string $value)
- *
  * @method string getProgram()
  * @method void setProgram(string $value)
  *
@@ -22,9 +19,14 @@ class Entity extends AbstractEntity
         return $this->getField('key_day');
     }
 
+    public function getKeyMilestone(): string
+    {
+        return $this->getField('key_milestone');
+    }
+
     public function getID(): string
     {
-        return sprintf("%03x", $this->getKey());
+        return $this->getKey();
     }
 
     public function parse(): string
@@ -35,10 +37,5 @@ class Entity extends AbstractEntity
     public function save(): void
     {
         Manager::save($this);
-    }
-
-    public function getStep(): string
-    {
-        return $this->getKey();
     }
 }

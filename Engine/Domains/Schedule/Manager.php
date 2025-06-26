@@ -1,9 +1,9 @@
 <?php
 
-namespace Liloi\TARDIS\Domains\Road;
+namespace Liloi\TARDIS\Domains\Schedule;
 
 use Liloi\TARDIS\Domains\Manager as DomainManager;
-use Liloi\TARDIS\Domains\Maps\Manager as MapsManager;
+use Liloi\TARDIS\Domains\Milestones\Manager as MilestonesManager;
 
 class Manager extends DomainManager
 {
@@ -14,7 +14,7 @@ class Manager extends DomainManager
      */
     public static function getTableName(): string
     {
-        return self::getTablePrefix() . 'road';
+        return self::getTablePrefix() . 'schedule';
     }
 
     public static function loadCollection(): Collection
@@ -91,7 +91,7 @@ class Manager extends DomainManager
     public static function create(): Entity
     {
         $data = [
-            'map' => MapsManager::getMapID(),
+            'key_milestone' => MilestonesManager::loadCurrentKey(),
             'program' => '-',
             'data' => '{}'
         ];

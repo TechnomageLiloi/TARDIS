@@ -1,6 +1,6 @@
 <?php
 
-namespace Liloi\TARDIS\Domains\Road;
+namespace Liloi\TARDIS\Domains\Schedule;
 
 use Liloi\Tools\Collection as AbstractCollection;
 
