@@ -1,9 +1,9 @@
 <?php
 
-namespace Liloi\TARDIS\API\Road\Save;
+namespace Liloi\TARDIS\API\Schedule\Save;
 
 use Liloi\TARDIS\API\Method as SuperMethod;
-use Liloi\TARDIS\Domains\Road\Manager as DiaryManager;
+use Liloi\TARDIS\Domains\Schedule\Manager as DiaryManager;
 
 class Method extends SuperMethod
 {

@@ -1,7 +1,7 @@
-Requests.Road = {
+Requests.Schedule = {
     show: function ()
     {
-        API.request('Road.Show', {
+        API.request('Schedule.Show', {
             debug: false
         }, function (data) {
             $('#page').html(data.render);
@@ -10,25 +10,9 @@ Requests.Road = {
         });
     },
 
-    create: function ()
-    {
-        if(!confirm('Are you sure?'))
-        {
-            return;
-        }
-
-        API.request('Road.Create', {
-            debug: false
-        }, function (data) {
-            Requests.Road.show();
-        }, function () {
-
-        });
-    },
-
     edit: function (key_day)
     {
-        API.request('Road.Edit', {
+        API.request('Schedule.Edit', {
             key_day: key_day
         }, function (data) {
             const wrap = $('#page');
@@ -47,12 +31,12 @@ Requests.Road = {
         }
 
         const jq_block = $('#application-diary-edit');
-        API.request('Road.Save', {
+        API.request('Schedule.Save', {
             key_day: key_day,
             data: jq_block.find('[name=data]').val(),
             program: jq_block.find('[name=program]').val()
         }, function (data) {
-            Requests.Road.show();
+            Requests.Schedule.show();
         }, function () {
 
         });

@@ -64,9 +64,14 @@ class Manager extends DomainManager
         $name = self::getTableName();
 
         $row = self::getAdapter()->getRow(sprintf(
-            'select * from %s order by key_day desc;',
-            $name
+            'select * from %s where key_day="%s";',
+            $name, date('Y-m-d')
         ));
+
+        if(!$row)
+        {
+            return self::create();
+        }
 
         return Entity::create($row);
     }
@@ -91,6 +96,7 @@ class Manager extends DomainManager
     public static function create(): Entity
     {
         $data = [
+            'key_day' => date('Y-m-d'),
             'key_milestone' => MilestonesManager::loadCurrentKey(),
             'program' => '-',
             'data' => '{}'

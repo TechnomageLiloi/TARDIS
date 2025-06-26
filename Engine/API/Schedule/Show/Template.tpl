@@ -1,14 +1,14 @@
-<link href="/API/Road/Show/Style.css" rel="stylesheet" />
+<link href="/API/Schedule/Show/Style.css" rel="stylesheet" />
 <div id="application-diary-show" class="stylo">
     <div class="controls">
-        <a class="butn" href="javascript:void(0)" onclick="Requests.Road.show('<?php echo $entity->getKey(); ?>');">Show</a>
-        <a class="butn" href="javascript:void(0)" onclick="Requests.Road.edit('<?php echo $entity->getKey(); ?>');">Edit</a>
+        <a class="butn" href="javascript:void(0)" onclick="Requests.Schedule.show('<?php echo $entity->getKey(); ?>');">Show</a>
+        <a class="butn" href="javascript:void(0)" onclick="Requests.Schedule.edit('<?php echo $entity->getKey(); ?>');">Edit</a>
         &diams;
         <a class="butn" href="javascript:void(0)" onclick="Requests.Tickets.create('<?php echo $entity->getKey(); ?>');">Create ticket</a>
     </div>
     <br/>
     <div class="data">
-        [<?php echo $entity->getID(); ?>] <?php echo $entity->getMap(); ?> <?php echo $entity->getData(); ?>
+        [<?php echo $entity->getID(); ?>] <?php echo $entity->getData(); ?>
     </div>
     <hr/>
     <?php echo $entity->parse(); ?>

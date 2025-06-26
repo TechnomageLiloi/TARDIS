@@ -1,9 +1,9 @@
 <?php
 
-namespace Liloi\TARDIS\API\Road\Edit;
+namespace Liloi\TARDIS\API\Schedule\Edit;
 
 use Liloi\TARDIS\API\Method as SuperMethod;
-use Liloi\TARDIS\Domains\Road\Manager as DiaryManager;
+use Liloi\TARDIS\Domains\Schedule\Manager as DiaryManager;
 
 /**
  * Rune API: Interstate60.Application.Diary.Edit
