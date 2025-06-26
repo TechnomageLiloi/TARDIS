@@ -38,6 +38,8 @@ create table milestones
         primary key (key_milestone)
 );
 
+insert into milestones VALUES (1, 'Start milestone', '{}');
+
 create table road
 (
     key_day bigint unsigned auto_increment,
