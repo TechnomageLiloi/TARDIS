@@ -59,8 +59,11 @@ create table tickets
     key_day date not null,
     key_milestone bigint unsigned not null,
     key_level tinyint unsigned not null,
+    map varchar(250) not null,
     title varchar(100) not null,
     status tinyint unsigned default 1 not null,
+    program text not null,
+    data json not null,
     constraint tickets_pk
         primary key (key_ticket),
     constraint tickets_schedule_key_day_fk
