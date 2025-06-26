@@ -40,14 +40,38 @@ create table milestones
 
 insert into milestones VALUES (1, 'Start milestone', '{}');
 
-create table road
+create table schedule
 (
-    key_day bigint unsigned auto_increment,
-    map varchar(250) not null,
+    key_day date not null,
+    key_milestone bigint unsigned not null,
     program text not null,
     data json not null,
-    constraint road_pk
-        primary key (key_day)
+    constraint schedule_pk
+        primary key (key_day),
+    constraint schedule_milestones_key_milestone_fk
+        foreign key (key_milestone) references milestones (key_milestone)
+            on update cascade on delete cascade
+);
+
+create table tickets
+(
+    key_ticket timestamp not null,
+    key_day date not null,
+    key_milestone bigint unsigned not null,
+    key_level tinyint unsigned not null,
+    title varchar(100) not null,
+    status tinyint unsigned default 1 not null,
+    constraint tickets_pk
+        primary key (key_ticket),
+    constraint tickets_schedule_key_day_fk
+        foreign key (key_day) references schedule (key_day)
+            on update cascade on delete cascade,
+    constraint tickets_milestones_key_milestone_fk
+        foreign key (key_milestone) references milestones (key_milestone)
+            on update cascade on delete cascade,
+    constraint tickets_levels_key_level_fk
+        foreign key (key_level) references levels (key_level)
+            on update cascade on delete cascade
 );
 
 create table quests
@@ -76,19 +100,6 @@ create table exercises
     theory text not null,
     constraint exercises_pk
         primary key (key_exercise, map)
-);
-
-create table tickets
-(
-    key_ticket timestamp not null,
-    key_day bigint unsigned not null,
-    title varchar(100) not null,
-    status tinyint unsigned default 1 not null,
-    constraint tickets_pk
-        primary key (key_ticket),
-    constraint tickets_road_key_day_fk
-        foreign key (key_day) references road (key_day)
-            on update cascade on delete cascade
 );
 
 create table euphoria

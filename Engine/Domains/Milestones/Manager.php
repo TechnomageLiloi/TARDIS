@@ -72,6 +72,21 @@ class Manager extends DomainManager
     }
 
     /**
+     * Load current milestone key.
+     *
+     * @return string
+     */
+    public static function loadCurrentKey(): string
+    {
+        $name = self::getTableName();
+
+        return (string)self::getAdapter()->getSingle(sprintf(
+            'select key_milestone from %s order by key_milestone desc limit 1;',
+            $name
+        ));
+    }
+
+    /**
      * Save day.
      *
      * @param Entity $entity
