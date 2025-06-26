@@ -9,7 +9,7 @@ Requests.Tickets = {
         API.request('Tickets.Create', {
             'key_day': key_day
         }, function (data) {
-            Requests.Road.show();
+            Requests.Schedule.show();
         }, function () {
 
         });
@@ -40,7 +40,7 @@ Requests.Tickets = {
             'title': jq_block.find('[name="title"]').val(),
             'status': jq_block.find('[name="status"]').val()
         }, function (data) {
-            Requests.Road.show();
+            Requests.Schedule.show();
         }, function () {
 
         });

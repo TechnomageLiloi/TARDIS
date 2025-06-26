@@ -5,11 +5,20 @@ namespace Liloi\TARDIS\Domains\Tickets;
 use Liloi\Tools\Entity as AbstractEntity;
 
 /**
+ * @method string getMap()
+ * @method void setMap(string $value)
+ *
  * @method string getTitle()
  * @method void setTitle(string $value)
  *
  * @method string getStatus()
  * @method void setStatus(string $value)
+ *
+ * @method string getProgram()
+ * @method void setProgram(string $value)
+ *
+ * @method string getData()
+ * @method void setData(string $value)
  */
 class Entity extends AbstractEntity
 {

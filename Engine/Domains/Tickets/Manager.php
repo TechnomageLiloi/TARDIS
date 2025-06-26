@@ -3,6 +3,8 @@
 namespace Liloi\TARDIS\Domains\Tickets;
 
 use Liloi\TARDIS\Domains\Manager as DomainManager;
+use Liloi\TARDIS\Domains\Maps\Manager as MapsManager;
+use Liloi\TARDIS\Domains\Milestones\Manager as MilestonesManager;
 
 class Manager extends DomainManager
 {
@@ -65,14 +67,19 @@ class Manager extends DomainManager
     }
 
     // @todo: rise this method to more abstract level.
-    public static function create(string $keyDay): void
+    public static function create(): void
     {
         $name = self::getTableName();
         self::getAdapter()->insert($name, [
             'key_ticket' => date('Y-m-d H:i:s'),
-            'key_day' => $keyDay,
+            'key_day' => date('Y-m-d'),
+            'key_milestone' => MilestonesManager::loadCurrentKey(),
+            'key_level' => '1',
+            'map' => MapsManager::getMapID(),
             'title' => 'Enter the title',
-            'status' => Statuses::TODO
+            'status' => Statuses::TODO,
+            'program' => '-',
+            'data' => '{}'
         ]);
     }
 }
