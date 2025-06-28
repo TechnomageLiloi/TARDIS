@@ -31,8 +31,11 @@ Requests.Power = {
         const jq_block = $('#edit');
         API.request('Power.Save', {
             key: key,
-            title: jq_block.find('[name=title]').val(),
-            price: jq_block.find('[name=price]').val(),
+            firstname: jq_block.find('[name=firstname]').val(),
+            fullname: jq_block.find('[name=fullname]').val(),
+            nickname: jq_block.find('[name=nickname]').val(),
+            degree: jq_block.find('[name=degree]').val(),
+            type: jq_block.find('[name=type]').val(),
             dt: jq_block.find('[name=dt]').val(),
             summary: jq_block.find('[name=summary]').val(),
             data: jq_block.find('[name=data]').val()

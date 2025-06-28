@@ -6,8 +6,20 @@ use Liloi\Stylo\Parser;
 use Liloi\Tools\Entity as AbstractEntity;
 
 /**
- * @method string getTitle()
- * @method void setTitle(string $value)
+ * @method string getFirstname()
+ * @method void setFirstname(string $value)
+ *
+ * @method string getFullname()
+ * @method void setFullname(string $value)
+ *
+ * @method string getNickname()
+ * @method void setNickname(string $value)
+ *
+ * @method string getDegree()
+ * @method void setDegree(string $value)
+ *
+ * @method string getType()
+ * @method void setType(string $value)
  *
  * @method string getDt()
  * @method void setDt(string $value)
@@ -17,9 +29,6 @@ use Liloi\Tools\Entity as AbstractEntity;
  *
  * @method string getData()
  * @method void setData(string $value)
- *
- * @method string getPrice()
- * @method void setPrice(string $value)
  */
 class Entity extends AbstractEntity
 {
