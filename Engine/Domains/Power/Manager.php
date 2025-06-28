@@ -1,6 +1,6 @@
 <?php
 
-namespace Liloi\TARDIS\Domains\Euphoria;
+namespace Liloi\TARDIS\Domains\Power;
 
 use Liloi\TARDIS\Domains\Manager as DomainManager;
 
@@ -13,7 +13,7 @@ class Manager extends DomainManager
      */
     public static function getTableName(): string
     {
-        return self::getTablePrefix() . 'euphoria';
+        return self::getTablePrefix() . 'power';
     }
 
     public static function loadCollection(): Collection
@@ -21,7 +21,7 @@ class Manager extends DomainManager
         $name = self::getTableName();
 
         $rows = self::getAdapter()->getArray(sprintf(
-            'select * from %s order by key_euphoria desc limit 17;',
+            'select * from %s order by key_power desc limit 17;',
             $name
         ));
 
@@ -46,7 +46,7 @@ class Manager extends DomainManager
         $name = self::getTableName();
 
         $row = self::getAdapter()->getRow(sprintf(
-            'select * from %s where key_euphoria="%s"',
+            'select * from %s where key_power="%s"',
             $name,
             $keyRoad
         ));
@@ -64,12 +64,12 @@ class Manager extends DomainManager
         $name = self::getTableName();
         $data = $entity->get();
 
-        $RID = $data['key_euphoria'];
+        $RID = $data['key_power'];
 
         self::update(
             $name,
             $data,
-            sprintf('key_euphoria = "%s"', $RID)
+            sprintf('key_power = "%s"', $RID)
         );
     }
 
@@ -80,11 +80,14 @@ class Manager extends DomainManager
     {
         $name = self::getTableName();
         $data = [
-            'title' => 'Enter euphoria title',
-            'dt' => date('Y-m-d H:i:s'),
+            'firstname' => 'Enter first name',
+            'fullname' => 'Enter full name',
+            'nickname' => 'Enter nickname',
+            'degree' => 'Enter degree',
+            'type' => '1',
             'summary' => '-',
             'data' => '{}',
-            'price' => '0'
+            'dt' => date('Y-m-d H:i:s'),
         ];
 
         self::insert($name, $data);

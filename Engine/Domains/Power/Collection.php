@@ -1,6 +1,6 @@
 <?php
 
-namespace Liloi\TARDIS\Domains\Euphoria;
+namespace Liloi\TARDIS\Domains\Power;
 
 use Liloi\Tools\Collection as AbstractCollection;
 
@@ -15,7 +15,7 @@ class Collection extends AbstractCollection
     {
         if(!$this->count())
         {
-            return 'Add at least one euphoria record.';
+            return 'Add at least one power record.';
         }
 
         $date1 = new \DateTime(date('Y-m-d H:i:s'));

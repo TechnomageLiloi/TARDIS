@@ -1,6 +1,6 @@
 <?php
 
-namespace Liloi\TARDIS\Domains\Euphoria;
+namespace Liloi\TARDIS\Domains\Power;
 
 use Liloi\Stylo\Parser;
 use Liloi\Tools\Entity as AbstractEntity;
@@ -25,7 +25,7 @@ class Entity extends AbstractEntity
 {
     public function getKey(): string
     {
-        return $this->getField('key_euphoria');
+        return $this->getField('key_power');
     }
 
     public function parseSummary(): string
