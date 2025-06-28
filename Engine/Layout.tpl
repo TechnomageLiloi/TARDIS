@@ -29,6 +29,7 @@
             <a href="javascript:void(0)" class="butn" onclick="Requests.Levels.getCollection();">Levels</a>
             <a class="butn" href="javascript:void(0)" onclick="Requests.Quests.getCollection();">Quests</a>
             <a class="butn" href="javascript:void(0)" onclick="Requests.Exercises.getCollection();">Exercises</a>
+            &diamondsuit;
             <a href="javascript:void(0)" class="butn" onclick="Requests.Euphoria.show();">Euphorias</a>
             &diamondsuit;
             <a class="butn" href="javascript:void(0)" onclick="Requests.Milestones.show();">Milestone</a>

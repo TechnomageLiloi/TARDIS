@@ -105,15 +105,18 @@ create table exercises
         primary key (key_exercise, map)
 );
 
-create table euphoria
+create table power
 (
-    key_euphoria bigint unsigned auto_increment,
-    title varchar(100) not null,
-    dt timestamp not null,
+    key_power bigint unsigned auto_increment,
+    firstname varchar(100) not null,
+    fullname varchar(100) not null,
+    nickname varchar(100) not null,
+    degree varchar(100) not null,
+    type tinyint unsigned default 1 not null,
     summary text not null,
     data json not null,
-    price smallint unsigned default 0 not null,
-    constraint euphoria_pk
-        primary key (key_euphoria)
+    dt timestamp not null,
+    constraint power_pk
+        primary key (key_power)
 );
 
