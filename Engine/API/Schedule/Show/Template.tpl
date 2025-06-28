@@ -18,6 +18,7 @@
         <tr>
             <th>Title</th>
             <th>Status</th>
+            <th>Map</th>
             <th>Data</th>
             <th>Action</th>
         </tr>
@@ -25,6 +26,7 @@
             <tr>
                 <td><?php echo $ticket->getTitle(); ?></td>
                 <td><?php echo $ticket->getStatusTitle(); ?></td>
+                <td><?php echo $ticket->getMap(); ?></td>
                 <td><?php echo $ticket->getData(); ?></td>
                 <td>
                     <a href="javascript:void(0)" class="butn" onclick="Requests.Tickets.edit('<?php echo $ticket->getKey(); ?>');">Edit</a>
