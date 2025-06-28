@@ -1,5 +1,5 @@
 <div id="edit" style="text-align: center;">
-    <a href="javascript:void(0)" class="butn" onclick="Requests.Euphoria.save('<?php echo $entity->getKey(); ?>');">Save</a>
+    <a href="javascript:void(0)" class="butn" onclick="Requests.Power.save('<?php echo $entity->getKey(); ?>');">Save</a>
     <table>
         <tr>
             <td>Title</td>
@@ -22,5 +22,5 @@
             <td><input type="text" name="data" value="<?php echo $entity->getData(); ?>"></td>
         </tr>
     </table>
-    <a href="javascript:void(0)" class="butn" onclick="Requests.Euphoria.save('<?php echo $entity->getKey(); ?>');">Save</a>
+    <a href="javascript:void(0)" class="butn" onclick="Requests.Power.save('<?php echo $entity->getKey(); ?>');">Save</a>
 </div>

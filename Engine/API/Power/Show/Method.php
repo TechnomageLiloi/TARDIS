@@ -1,15 +1,15 @@
 <?php
 
-namespace Liloi\TARDIS\API\Euphoria\Show;
+namespace Liloi\TARDIS\API\Power\Show;
 
-use Liloi\TARDIS\Domains\Euphoria\Manager as EuphoriaManager;
+use Liloi\TARDIS\Domains\Power\Manager as PowerManager;
 use Liloi\TARDIS\API\Method as AbstractMethod;
 
 class Method extends AbstractMethod
 {
     public function execute(): array
     {
-        $collection = EuphoriaManager::loadCollection();
+        $collection = PowerManager::loadCollection();
 
         return [
             'render' => $this->render(__DIR__ . '/Template.tpl', [

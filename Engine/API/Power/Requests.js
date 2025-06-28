@@ -1,7 +1,7 @@
-Requests.Euphoria = {
+Requests.Power = {
     show: function ()
     {
-        API.request('Euphoria.Show', {
+        API.request('Power.Show', {
             'debug': true
         }, function (data) {
             $('#page').html(data.render);
@@ -12,7 +12,7 @@ Requests.Euphoria = {
 
     edit: function (key)
     {
-        API.request('Euphoria.Edit', {
+        API.request('Power.Edit', {
             'key': key
         }, function (data) {
             $('#page').html(data.render);
@@ -29,7 +29,7 @@ Requests.Euphoria = {
         }
 
         const jq_block = $('#edit');
-        API.request('Euphoria.Save', {
+        API.request('Power.Save', {
             key: key,
             title: jq_block.find('[name=title]').val(),
             price: jq_block.find('[name=price]').val(),
@@ -37,7 +37,7 @@ Requests.Euphoria = {
             summary: jq_block.find('[name=summary]').val(),
             data: jq_block.find('[name=data]').val()
         }, function (data) {
-            Requests.Euphoria.show();
+            Requests.Power.show();
         }, function () {
 
         });
@@ -50,10 +50,10 @@ Requests.Euphoria = {
             return;
         }
 
-        API.request('Euphoria.Create', {
+        API.request('Power.Create', {
             'debug': true
         }, function (data) {
-            Requests.Euphoria.show();
+            Requests.Power.show();
         }, function () {
 
         });

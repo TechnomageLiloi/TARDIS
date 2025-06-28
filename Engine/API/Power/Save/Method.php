@@ -1,15 +1,15 @@
 <?php
 
-namespace Liloi\TARDIS\API\Euphoria\Save;
+namespace Liloi\TARDIS\API\Power\Save;
 
-use Liloi\TARDIS\Domains\Euphoria\Manager as EuphoriaManager;
+use Liloi\TARDIS\Domains\Power\Manager as PowerManager;
 use Liloi\TARDIS\API\Method as AbstractMethod;
 
 class Method extends AbstractMethod
 {
     public function execute(): array
     {
-        $entity = EuphoriaManager::load($_POST['parameters']['key']);
+        $entity = PowerManager::load($_POST['parameters']['key']);
 
         $entity->setTitle($_POST['parameters']['title']);
         $entity->setSummary($_POST['parameters']['summary']);
