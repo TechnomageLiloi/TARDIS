@@ -120,3 +120,15 @@ create table power
         primary key (key_power)
 );
 
+create table codex
+(
+    key_codex varchar(250) not null,
+    executed bool default false not null,
+    title varchar(200) not null,
+    summary text not null,
+    data json not null,
+    constraint codex_pk
+        primary key (key_codex)
+);
+
+
