@@ -22,7 +22,7 @@ class Entity extends AbstractEntity
 {
     public function getKey(): string
     {
-        return $this->getField('key_power');
+        return $this->getField('key_codex');
     }
 
     public function parseSummary(): string

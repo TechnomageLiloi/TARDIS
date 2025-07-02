@@ -36,7 +36,7 @@ Requests.Codex = {
             summary: jq_block.find('[name=summary]').val(),
             data: jq_block.find('[name=data]').val()
         }, function (data) {
-            Requests.Codex.show();
+            Requests.Codex.show(key);
         }, function () {
 
         });
