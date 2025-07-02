@@ -32,6 +32,11 @@ class Entity extends AbstractEntity
         return $this->getField('key_level');
     }
 
+    public function setKeyLevel(string $value): void
+    {
+        $this->setField('key_level', $value);
+    }
+
     public function save(): void
     {
         Manager::save($this);

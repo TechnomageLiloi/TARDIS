@@ -20,6 +20,8 @@
             <th>Value</th>
         </tr>
 
+        <tr><td>Level</td><td><input type="text" name="key_level" value="<?php echo $entity->getKeyLevel(); ?>"/></td></tr>
+
         <tr><td>Title</td><td><input type="text" name="title" value="<?php echo $entity->getTitle(); ?>"/></td></tr>
 
         <tr><td>Status</td><td>

@@ -37,6 +37,7 @@ Requests.Tickets = {
         const jq_block = $('#ticket-edit');
         API.request('Tickets.Save', {
             'key_ticket': key_ticket,
+            'key_level': jq_block.find('[name="key_level"]').val(),
             'title': jq_block.find('[name="title"]').val(),
             'status': jq_block.find('[name="status"]').val(),
             'data': jq_block.find('[name=data]').val(),

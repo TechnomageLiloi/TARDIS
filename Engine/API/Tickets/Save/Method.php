@@ -11,6 +11,7 @@ class Method extends AbstractMethod
     {
         $entity = Manager::load($_POST['parameters']['key_ticket']);
 
+        $entity->setKeyLevel($_POST['parameters']['key_level']);
         $entity->setTitle($_POST['parameters']['title']);
         $entity->setStatus($_POST['parameters']['status']);
         $entity->setData($_POST['parameters']['data']);
