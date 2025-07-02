@@ -40,21 +40,5 @@ Requests.Codex = {
         }, function () {
 
         });
-    },
-
-    create: function (key)
-    {
-        if(!confirm('Are you sure?'))
-        {
-            return;
-        }
-
-        API.request('Codex.Create', {
-            key_codex: key
-        }, function (data) {
-            Requests.Codex.show();
-        }, function () {
-
-        });
-    },
+    }
 };
