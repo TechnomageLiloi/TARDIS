@@ -5,6 +5,7 @@ namespace Liloi\TARDIS\Domains\Tickets;
 use Liloi\TARDIS\Domains\Manager as DomainManager;
 use Liloi\TARDIS\Domains\Maps\Manager as MapsManager;
 use Liloi\TARDIS\Domains\Milestones\Manager as MilestonesManager;
+use Liloi\TARDIS\Domains\Levels\Manager as LevelsManager;
 
 class Manager extends DomainManager
 {
@@ -35,6 +36,27 @@ class Manager extends DomainManager
         }
 
         return $collection;
+    }
+
+    public static function loadSchedule(string $keyDay): array
+    {
+        $tickets = self::loadCollection($keyDay);
+
+        $data = [];
+        $levels = LevelsManager::getList();
+
+        foreach (array_values($levels) as $value)
+        {
+            $data[$value] = [];
+        }
+
+        /** @var Entity $ticket */
+        foreach ($tickets as $ticket)
+        {
+            $data[$levels[$ticket->getKeyLevel()]][] = $ticket;
+        }
+
+        return $data;
     }
 
     public static function load(string $key): Entity

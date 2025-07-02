@@ -11,12 +11,12 @@ class Method extends SuperMethod
     public function execute(): array
     {
         $entity = DiaryManager::loadCurrent();
-        $tickets = TicketsManager::loadCollection($entity->getKey());
+        $schedule = TicketsManager::loadSchedule($entity->getKey());
 
         return [
             'render' => $this->render(__DIR__ . '/Template.tpl', [
                 'entity' => $entity,
-                'tickets' => $tickets
+                'schedule' => $schedule
             ])
         ];
     }

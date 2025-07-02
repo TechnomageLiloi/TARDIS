@@ -27,6 +27,11 @@ class Entity extends AbstractEntity
         return $this->getField('key_ticket');
     }
 
+    public function getKeyLevel(): string
+    {
+        return $this->getField('key_level');
+    }
+
     public function save(): void
     {
         Manager::save($this);
