@@ -24,8 +24,8 @@ class Manager extends DomainManager
         $name = self::getTableName();
 
         $rows = self::getAdapter()->getArray(sprintf(
-            'select * from %s where key_day="%s" order by key_ticket desc;',
-            $name, $keyDay
+            'select * from %s where key_day="%s" and status!="%s" order by key_ticket desc;',
+            $name, $keyDay, Statuses::TODO
         ));
 
         $collection = new Collection();
