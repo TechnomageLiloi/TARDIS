@@ -59,6 +59,39 @@ class Manager extends DomainManager
         return $data;
     }
 
+    public static function loadTodos(string $keyMilestone): array
+    {
+        $name = self::getTableName();
+
+        $rows = self::getAdapter()->getArray(sprintf(
+            'select * from %s where key_milestone="%s" and status="%s" order by key_ticket desc;',
+            $name, $keyMilestone, Statuses::TODO
+        ));
+
+        $tickets = new Collection();
+
+        foreach($rows as $row)
+        {
+            $tickets[] = Entity::create($row);
+        }
+
+        $data = [];
+        $levels = LevelsManager::getList();
+
+        foreach (array_values($levels) as $value)
+        {
+            $data[$value] = [];
+        }
+
+        /** @var Entity $ticket */
+        foreach ($tickets as $ticket)
+        {
+            $data[$levels[$ticket->getKeyLevel()]][] = $ticket;
+        }
+
+        return $data;
+    }
+
     public static function load(string $key): Entity
     {
         $name = self::getTableName();
