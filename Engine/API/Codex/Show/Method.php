@@ -10,10 +10,12 @@ class Method extends AbstractMethod
     public function execute(): array
     {
         $entity = CodexManager::load($_POST['parameters']['key_codex']);
+        $children = CodexManager::loadChildren($_POST['parameters']['key_codex']);
 
         return [
             'render' => $this->render(__DIR__ . '/Template.tpl', [
-                'entity' => $entity
+                'entity' => $entity,
+                'children' => $children,
             ])
         ];
     }

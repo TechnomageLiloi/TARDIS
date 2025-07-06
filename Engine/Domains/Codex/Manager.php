@@ -59,6 +59,34 @@ class Manager extends DomainManager
         return Entity::create($row);
     }
 
+    public static function loadChildren(string $keyCodex): Collection
+    {
+        $name = self::getTableName();
+
+        if($keyCodex === '.')
+        {
+            $rows = self::getAdapter()->getArray(sprintf(
+                'select * from %s where (key_codex != ".") && (key_codex like "%s%%") && (key_codex not like "%s%%.%%");',
+                $name, $keyCodex, $keyCodex
+            ));
+        }
+        else
+        {
+            $rows = self::getAdapter()->getArray(sprintf(
+                'select * from %s where (key_codex != "%s") && (key_codex like "%s.%%") && (key_codex not like "%s.%%.%%");',
+                $name, $keyCodex, $keyCodex, $keyCodex
+            ));
+        }
+        $collection = new Collection();
+
+        foreach($rows as $row)
+        {
+            $collection[] = Entity::create($row);
+        }
+
+        return $collection;
+    }
+
     /**
      * Save problem to database.
      *
