@@ -12,7 +12,7 @@
     }
 </style>
 <div id="ticket-edit">
-    <a href="javascript:void(0)" onclick="Requests.Tickets.save('<?php echo $entity->getKey(); ?>');">Save</a>
+    <a href="javascript:void(0)" class="butn" onclick="Requests.Tickets.save('<?php echo $entity->getKey(); ?>');">Save</a>
     <hr/>
     <table style="width: 100%;">
         <tr>

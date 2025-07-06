@@ -18,7 +18,7 @@
                             <a href="<?php echo $file['link']; ?>"><?php echo $file['name']; ?></a>
                         </td>
                         <td>
-                            <a href="javascript:void(0)" onclick="Requests.Services.Text.edit('<?php echo $file['name']; ?>');">Edit</a>
+                            <a href="javascript:void(0)" onclick="Requests.Services.Text.edit('<?php echo $file['name']; ?>');" class="butn">Edit</a>
                         </td>
                     </tr>
                 <?php endforeach; ?>
