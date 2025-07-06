@@ -20,7 +20,16 @@
             <th>Value</th>
         </tr>
 
-        <tr><td>Level</td><td><input type="text" name="key_level" value="<?php echo $entity->getKeyLevel(); ?>"/></td></tr>
+        <tr>
+            <td>Level</td>
+            <td>
+                <select name="key_level">
+                    <?php foreach($levels as $key => $value): ?>
+                        <option value="<?php echo $key; ?>" <?php if($entity->getKeyLevel() == $key): ?>selected="selected"<?php endif; ?>><?php echo $value; ?></option>
+                    <?php endforeach; ?>
+                </select>
+            </td>
+        </tr>
 
         <tr><td>Title</td><td><input type="text" name="title" value="<?php echo $entity->getTitle(); ?>"/></td></tr>
 
