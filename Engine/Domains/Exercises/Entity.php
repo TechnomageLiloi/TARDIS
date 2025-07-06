@@ -35,7 +35,7 @@ class Entity extends AbstractEntity
 
     public function getID(): string
     {
-        return sprintf("%s:%03x", $this->getMap(), $this->getKey());
+        return 'exercise' . strtolower(str_replace(':', '-', $this->getMap())) . '-' . $this->getKey();
     }
 
     public function getStatusTitle(): string
@@ -87,5 +87,12 @@ class Entity extends AbstractEntity
         }
 
         return $program['answer'];
+    }
+
+    public function render(): string
+    {
+        return Manager::render(__DIR__ . '/Templates/' . Types::$list[$this->getType()] . '.tpl', [
+            'entity' => $this
+        ]);
     }
 }

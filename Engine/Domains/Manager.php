@@ -111,4 +111,17 @@ class Manager extends AbstractManager
 
         self::getAdapter()->insert($table, $params);
     }
+
+    public static function render(string $template, array $data = []): string
+    {
+        // @todo: assert filename
+
+        extract($data);
+
+        ob_start();
+        include($template);
+        $output = ob_get_clean();
+
+        return $output;
+    }
 }
