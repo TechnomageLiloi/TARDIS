@@ -2,8 +2,8 @@
 
 namespace Liloi\TARDIS\Domains\Exercises;
 
-use Liloi\Tools\Entity as AbstractEntity;
 use Liloi\Stylo\Parser as StyloParser;
+use Liloi\TARDIS\Domains\Entity as AbstractEntity;
 
 /**
  * @method string getMap()
