@@ -122,7 +122,7 @@ class Manager extends DomainManager
     }
 
     // @todo: rise this method to more abstract level.
-    public static function create(): void
+    public static function create($status = Statuses::TODO): void
     {
         $name = self::getTableName();
         self::getAdapter()->insert($name, [
@@ -132,7 +132,7 @@ class Manager extends DomainManager
             'key_level' => '1',
             'map' => MapsManager::getMapID(),
             'title' => 'Enter the title',
-            'status' => Statuses::TODO,
+            'status' => $status,
             'program' => '-',
             'data' => '{}'
         ]);

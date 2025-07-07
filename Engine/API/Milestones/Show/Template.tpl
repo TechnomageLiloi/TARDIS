@@ -5,6 +5,8 @@
         <a class="butn" href="javascript:void(0)" onclick="Requests.Milestones.edit('<?php echo $entity->getKey(); ?>');">Edit</a>
         &diams;
         <a class="butn" href="javascript:void(0)" onclick="Requests.Milestones.create();">Create new milestone</a>
+        &diams;
+        <a class="butn" href="javascript:void(0)" onclick="Requests.Tickets.create('0');">Create ticket</a>
     </div>
     <br/>
     <div class="data">

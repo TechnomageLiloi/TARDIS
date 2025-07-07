@@ -1,5 +1,5 @@
 Requests.Tickets = {
-    create: function (key_day)
+    create: function (status)
     {
         if(!confirm('Are you sure?'))
         {
@@ -7,7 +7,7 @@ Requests.Tickets = {
         }
 
         API.request('Tickets.Create', {
-            'key_day': key_day
+            'status': status
         }, function (data) {
             Requests.Schedule.show();
         }, function () {

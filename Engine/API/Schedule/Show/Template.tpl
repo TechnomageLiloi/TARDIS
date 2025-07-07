@@ -4,7 +4,7 @@
         <a class="butn" href="javascript:void(0)" onclick="Requests.Schedule.show('<?php echo $entity->getKey(); ?>');">Show</a>
         <a class="butn" href="javascript:void(0)" onclick="Requests.Schedule.edit('<?php echo $entity->getKey(); ?>');">Edit</a>
         &diams;
-        <a class="butn" href="javascript:void(0)" onclick="Requests.Tickets.create('<?php echo $entity->getKey(); ?>');">Create ticket</a>
+        <a class="butn" href="javascript:void(0)" onclick="Requests.Tickets.create('1');">Create ticket</a>
     </div>
     <br/>
     <div class="data">

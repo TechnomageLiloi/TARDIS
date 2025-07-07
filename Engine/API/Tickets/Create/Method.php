@@ -9,7 +9,7 @@ class Method extends AbstractMethod
 {
     public function execute(): array
     {
-        Manager::create();
+        Manager::create($_POST['parameters']['status']);
         return [];
     }
 }
