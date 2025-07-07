@@ -131,4 +131,13 @@ create table codex
         primary key (key_codex)
 );
 
-
+create table taboos
+(
+    key_taboo bigint unsigned auto_increment,
+    title varchar(100) not null,
+    dt timestamp not null,
+    summary text not null,
+    data json not null,
+    constraint taboos_pk
+        primary key (key_taboo)
+);
