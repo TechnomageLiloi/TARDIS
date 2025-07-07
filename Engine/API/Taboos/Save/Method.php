@@ -11,11 +11,7 @@ class Method extends AbstractMethod
     {
         $entity = TaboosManager::load($_POST['parameters']['key']);
 
-        $entity->setFirstname($_POST['parameters']['firstname']);
-        $entity->setFullname($_POST['parameters']['fullname']);
-        $entity->setNickname($_POST['parameters']['nickname']);
-        $entity->setDegree($_POST['parameters']['degree']);
-        $entity->setType($_POST['parameters']['type']);
+        $entity->setTitle($_POST['parameters']['title']);
         $entity->setSummary($_POST['parameters']['summary']);
         $entity->setData($_POST['parameters']['data']);
         $entity->setDt($_POST['parameters']['dt']);

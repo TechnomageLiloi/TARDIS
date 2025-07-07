@@ -16,6 +16,7 @@
         <script><?php echo file_get_contents(dirname(__DIR__) . '/Engine/API/Exercises/Requests.js'); ?></script>
         <script><?php echo file_get_contents(dirname(__DIR__) . '/Engine/API/Tickets/Requests.js'); ?></script>
         <script><?php echo file_get_contents(dirname(__DIR__) . '/Engine/API/Power/Requests.js'); ?></script>
+        <script><?php echo file_get_contents(dirname(__DIR__) . '/Engine/API/Taboos/Requests.js'); ?></script>
         <script><?php echo file_get_contents(dirname(__DIR__) . '/Engine/API/Milestones/Requests.js'); ?></script>
         <script><?php echo file_get_contents(dirname(__DIR__) . '/Engine/API/Codex/Requests.js'); ?></script>
 
@@ -32,7 +33,7 @@
             <a class="butn" href="javascript:void(0)" onclick="Requests.Exercises.getCollection();">Exercises</a>
             &diamondsuit;
             <a href="javascript:void(0)" class="butn" onclick="Requests.Power.show();">Power</a>
-            &diamondsuit;
+            <a href="javascript:void(0)" class="butn" onclick="Requests.Taboos.show();">Taboos</a>
             <a href="javascript:void(0)" class="butn" onclick="Requests.Codex.show('.');">Codex</a>
             &diamondsuit;
             <a class="butn" href="javascript:void(0)" onclick="Requests.Milestones.show();">Milestone</a>
