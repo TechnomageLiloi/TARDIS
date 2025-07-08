@@ -11,7 +11,7 @@ class Method extends SuperMethod
     public function execute(): array
     {
         $entity = DiaryManager::loadCurrent();
-        $schedule = TicketsManager::loadSchedule($entity->getKey());
+        $schedule = TicketsManager::loadScheduleByHours($entity->getKey());
 
         return [
             'render' => $this->render(__DIR__ . '/Template.tpl', [

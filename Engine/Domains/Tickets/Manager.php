@@ -59,6 +59,33 @@ class Manager extends DomainManager
         return $data;
     }
 
+    public static function loadScheduleByHours(string $keyDay): array
+    {
+        $tickets = self::loadCollection($keyDay);
+
+        $data = [];
+        $levels = LevelsManager::getList();
+
+//        foreach (array_values($levels) as $value)
+//        {
+//            $data[$value] = [];
+//        }
+
+        for ($i=0;$i<24;$i++)
+        {
+            $data[sprintf("%02d", $i)] = [];
+        }
+
+        /** @var Entity $ticket */
+        foreach ($tickets as $ticket)
+        {
+            $hour = date('H', strtotime($ticket->getKey()));
+            $data[sprintf("%02d", $hour)][] = $ticket;
+        }
+
+        return $data;
+    }
+
     public static function loadTodos(string $keyMilestone): array
     {
         $name = self::getTableName();
