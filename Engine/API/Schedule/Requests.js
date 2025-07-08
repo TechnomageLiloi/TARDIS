@@ -1,4 +1,15 @@
 Requests.Schedule = {
+    day: function ()
+    {
+        API.request('Schedule.Day', {
+            debug: false
+        }, function (data) {
+            $('#page').html(data.render);
+        }, function () {
+
+        });
+    },
+
     show: function ()
     {
         API.request('Schedule.Show', {

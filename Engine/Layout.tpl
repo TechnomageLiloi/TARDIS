@@ -37,7 +37,9 @@
             <a href="javascript:void(0)" class="butn" onclick="Requests.Codex.show('.');">Codex</a>
             &diamondsuit;
             <a class="butn" href="javascript:void(0)" onclick="Requests.Milestones.show();">Milestone</a>
-            <a class="butn" href="javascript:void(0)" onclick="Requests.Schedule.show();">Schedule</a>
+            Schedule
+            <a class="butn" href="javascript:void(0)" onclick="Requests.Schedule.show();">by levels</a>
+            <a class="butn" href="javascript:void(0)" onclick="Requests.Schedule.day();">by hours</a>
         </div>
         <hr/>
         <div id="page">

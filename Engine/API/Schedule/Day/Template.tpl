@@ -13,7 +13,7 @@
     <hr/>
     <?php echo $entity->parse(); ?>
     <hr/>
-    <h2>Schedule by levels</h2>
+    <h2>Schedule by hours</h2>
 
     <?php foreach($schedule as $title => $tickets): ?>
         <h3><?php echo $title; ?></h3>
