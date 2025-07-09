@@ -104,6 +104,12 @@ class Entity extends AbstractEntity
         return $program['answers'];
     }
 
+    public function getVideo(): string
+    {
+        $program = $this->getProgramList();
+        return $program['video'];
+    }
+
     public function render(): string
     {
         return Manager::render(__DIR__ . '/Templates/' . Types::$list[$this->getType()] . '.tpl', [
