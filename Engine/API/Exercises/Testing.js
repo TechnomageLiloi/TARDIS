@@ -76,8 +76,18 @@ const Testing = {
 
         jq_checks.each(function () {
             const jq_check = $(this);
-            const correct = jq_check.data('correct');
+
             const type = jq_check.data('type');
+
+            if(type === '><')
+            {
+                var from = jq_check.data('from');
+                var to = jq_check.data('to');
+            }
+            else
+            {
+                var correct = jq_check.data('correct');
+            }
             const actual = jq_check.val();
 
             if(actual === '')
@@ -87,6 +97,7 @@ const Testing = {
             }
 
             if(
+                (type === '><' && (actual < from || actual > to)) ||
                 (type === '==' && actual != correct) ||
                 (type === '>=' && actual < correct) ||
                 (type === '<=' && actual > correct)
