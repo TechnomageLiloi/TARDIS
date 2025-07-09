@@ -1,8 +1,8 @@
 <div id="<?php echo $entity->getID(); ?>" class="testing-sentence">
-    <div class="theory" style="display: none;">
-        <?php echo $entity->parseQuestion(); ?>
-    </div>
-    <a href="javascript:void(0)" onclick="Testing.checkSentence('<?php echo $entity->getID(); ?>');">Check</a>
+
+    <?php echo $entity->parseQuestion(); ?>
+    <hr/>
+    <a href="javascript:void(0)" onclick="Testing.checkSentence('<?php echo $entity->getID(); ?>');" class="butn">Check</a>
     <hr/>
     <div class="sentence">
         <?php $sentence = $entity->parseSentence(); ?>
