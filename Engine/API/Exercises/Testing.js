@@ -80,9 +80,15 @@ const Testing = {
             const type = jq_check.data('type');
             const actual = jq_check.val();
 
+            if(actual === '')
+            {
+                is_final = false;
+                return;
+            }
+
             if(
-                (type === '==' && correct != actual) ||
-                (type === '>=' && correct < actual)
+                (type === '==' && actual != correct) ||
+                (type === '>=' && actual < correct)
             ) {
                 is_final = false;
             }

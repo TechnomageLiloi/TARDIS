@@ -10,6 +10,8 @@
         <?php foreach($sentence as $block): ?>
             <?php if(str_starts_with($block, '==')): ?>
                 <input type="text" data-correct="<?php echo str_replace('==', '', $block); ?>" data-type="==">
+            <?php elseif(str_starts_with($block, '>=')): ?>
+                <input type="text" data-correct="<?php echo str_replace('>=', '', $block); ?>" data-type=">=">
             <?php else: ?>
                 <?php echo $block; ?>
             <?php endif; ?>

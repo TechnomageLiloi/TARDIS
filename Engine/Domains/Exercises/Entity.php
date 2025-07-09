@@ -112,7 +112,7 @@ class Entity extends AbstractEntity
         {
             return [
                 'test', '==test',
-                '>=5', '>=5'
+                'more of equal 5', '>=5'
             ];
         }
 
