@@ -104,6 +104,20 @@ class Entity extends AbstractEntity
         return $program['answers'];
     }
 
+    public function parseSentence(): array
+    {
+        $program = $this->getProgramList();
+
+        if(!array_key_exists('sentence', $program))
+        {
+            return [
+                'test', '==test'
+            ];
+        }
+
+        return $program['sentence'];
+    }
+
     public function getVideo(): string
     {
         $program = $this->getProgramList();
