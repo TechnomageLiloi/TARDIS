@@ -111,7 +111,8 @@ class Entity extends AbstractEntity
         if(!array_key_exists('sentence', $program))
         {
             return [
-                'test', '==test'
+                'test', '==test',
+                '>=5', '>=5'
             ];
         }
 

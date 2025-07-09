@@ -77,10 +77,13 @@ const Testing = {
         jq_checks.each(function () {
             const jq_check = $(this);
             const correct = jq_check.data('correct');
+            const type = jq_check.data('type');
             const actual = jq_check.val();
 
-            if(correct != actual)
-            {
+            if(
+                (type === '==' && correct != actual) ||
+                (type === '>=' && correct < actual)
+            ) {
                 is_final = false;
             }
         });
