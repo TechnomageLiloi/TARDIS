@@ -14,6 +14,7 @@
         <script><?php echo file_get_contents(dirname(__DIR__) . '/Engine/API/Schedule/Requests.js'); ?></script>
         <script><?php echo file_get_contents(dirname(__DIR__) . '/Engine/API/Quests/Requests.js'); ?></script>
         <script><?php echo file_get_contents(dirname(__DIR__) . '/Engine/API/Exercises/Requests.js'); ?></script>
+        <script><?php echo file_get_contents(dirname(__DIR__) . '/Engine/API/Exercises/Testing.js'); ?></script>
         <script><?php echo file_get_contents(dirname(__DIR__) . '/Engine/API/Tickets/Requests.js'); ?></script>
         <script><?php echo file_get_contents(dirname(__DIR__) . '/Engine/API/Power/Requests.js'); ?></script>
         <script><?php echo file_get_contents(dirname(__DIR__) . '/Engine/API/Taboos/Requests.js'); ?></script>
