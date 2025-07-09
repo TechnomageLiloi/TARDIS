@@ -26,7 +26,7 @@ const Testing = {
 
     checkRadio: function (key_question)
     {
-        const id = '#testing-' + key_question;
+        const id = '#' + key_question;
         const jq_block = $(id);
         const jq_selected = jq_block.find('input:checked');
 
@@ -43,7 +43,7 @@ const Testing = {
 
     checkCheck: function (key_question)
     {
-        const id = '#testing-' + key_question;
+        const id = '#' + key_question;
         const jq_block = $(id);
         const jq_checks = jq_block.find('input');
 

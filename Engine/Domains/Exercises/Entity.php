@@ -89,6 +89,21 @@ class Entity extends AbstractEntity
         return $program['answer'];
     }
 
+    public function parseAnswers(): array
+    {
+        $program = $this->getProgramList();
+
+        if(!array_key_exists('answers', $program))
+        {
+            return [
+                ['answer' => 'true', 'correct' => '1'],
+                ['answer' => 'false'],
+            ];
+        }
+
+        return $program['answers'];
+    }
+
     public function render(): string
     {
         return Manager::render(__DIR__ . '/Templates/' . Types::$list[$this->getType()] . '.tpl', [
