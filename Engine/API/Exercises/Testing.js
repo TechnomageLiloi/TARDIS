@@ -88,7 +88,8 @@ const Testing = {
 
             if(
                 (type === '==' && actual != correct) ||
-                (type === '>=' && actual < correct)
+                (type === '>=' && actual < correct) ||
+                (type === '<=' && actual > correct)
             ) {
                 is_final = false;
             }
