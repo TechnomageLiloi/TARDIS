@@ -15,3 +15,13 @@ create table tardis_config
     constraint tardis_config_pk
         primary key (key_config)
 );
+
+create table tardis_maps
+(
+    key_map varchar(1000) not null,
+    status tinyint unsigned not null default '1',
+    program text not null,
+    data json not null,
+    constraint tardis_maps_pk
+        primary key (key_map)
+);
