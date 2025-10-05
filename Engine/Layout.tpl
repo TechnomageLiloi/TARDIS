@@ -21,6 +21,11 @@
         <title>TARDIS</title>
     </head>
     <body>
+
+        <div id="menu">
+            <a class="butn" href="javascript:void(0)" onclick="window.location.reload();">Refresh</a>
+        </div>
+
         <div id="page">
             <script>
                 //Bionic.Dashboard.show();
