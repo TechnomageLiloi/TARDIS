@@ -85,4 +85,16 @@ class Manager extends DomainManager
 
         return Entity::create($data);
     }
+
+    public static function getMapID(): string
+    {
+        $URI = rtrim($_SERVER['REQUEST_URI'], '/');
+
+        if(empty($URI))
+        {
+            return ':';
+        }
+
+        return str_replace('/', ':', $URI);
+    }
 }
