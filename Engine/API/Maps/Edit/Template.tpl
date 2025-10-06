@@ -17,20 +17,25 @@
         </tr>
 
         <tr>
-            <td>Start</td>
+            <td>Type</td>
             <td>
-                <input name="start" type="text" value="<?php echo $entity->getStart(); ?>" />
-            </td>
-        </tr>
-        <tr>
-            <td>Finish</td>
-            <td>
-                <input name="finish" type="text" value="<?php echo $entity->getFinish(); ?>" />
+                <select name="type">
+                    <?php foreach($types as $key => $value): ?>
+                    <option value="<?php echo $key; ?>" <?php if($entity->getType() == $key): ?>selected="selected"<?php endif; ?>><?php echo $value; ?></option>
+                    <?php endforeach; ?>
+                </select>
             </td>
         </tr>
 
-        <tr><td>Teacher</td><td><textarea name="teacher"><?php echo $entity->getTeacher(); ?></textarea></td></tr>
+        <tr>
+            <td>Title</td>
+            <td>
+                <input name="title" type="text" value="<?php echo $entity->getTitle(); ?>" />
+            </td>
+        </tr>
+
         <tr><td>Program</td><td><textarea name="program"><?php echo $entity->getProgram(); ?></textarea></td></tr>
+
         <tr><td>Data</td><td><textarea name="data"><?php echo $entity->getData(); ?></textarea></td></tr>
     </table>
     <hr/>

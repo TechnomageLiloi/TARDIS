@@ -12,11 +12,10 @@ class Method extends SuperMethod
         $entity = DiaryManager::load($_POST['parameters']['key_quest']);
 
         $entity->setStatus($_POST['parameters']['status']);
-        $entity->setStart($_POST['parameters']['start']);
-        $entity->setFinish($_POST['parameters']['finish']);
+        $entity->setType($_POST['parameters']['type']);
+        $entity->setTitle($_POST['parameters']['title']);
         $entity->setData($_POST['parameters']['data']);
         $entity->setProgram($_POST['parameters']['program']);
-        $entity->setTeacher($_POST['parameters']['teacher']);
 
         $entity->save();
 
