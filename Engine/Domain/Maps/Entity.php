@@ -25,7 +25,7 @@ class Entity extends AbstractEntity
 {
     public function getKey(): string
     {
-        return $this->getField('key_quest');
+        return $this->getField('key_map');
     }
 
     public function parse(): string

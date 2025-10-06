@@ -15,8 +15,7 @@
         <link href="<?php echo ROOT_URL; ?>/Engine/API/Style.css" rel="stylesheet" />
 
         <script src="<?php echo ROOT_URL; ?>/Engine/API/Requests.js"></script>
-        <script src="<?php echo ROOT_URL; ?>/Engine/API/Dashboard/Requests.js"></script>
-        <script src="<?php echo ROOT_URL; ?>/Engine/API/Exercises/Requests.js"></script>
+        <script src="<?php echo ROOT_URL; ?>/Engine/API/Maps/Requests.js"></script>
 
         <title>UMKLAIDET</title>
     </head>
@@ -28,7 +27,7 @@
 
         <div id="page">
             <script>
-                //Bionic.Dashboard.show();
+                Requests.Maps.show();
             </script>
         </div>
     </body>

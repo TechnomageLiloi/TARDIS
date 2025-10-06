@@ -9,11 +9,11 @@ class Method extends SuperMethod
 {
     public function execute(): array
     {
-        $collection = DiaryManager::load(DiaryManager::getMapID());
+        $entity = DiaryManager::load(DiaryManager::getMapID());
 
         return [
             'render' => $this->render(__DIR__ . '/Template.tpl', [
-                'collection' => $collection
+                'entity' => $entity
             ])
         ];
     }

@@ -2,7 +2,7 @@ Requests.Maps = {
     show: function ()
     {
         API.request('Maps.Show', {
-            dt: $('#search').val()
+            debug: true
         }, function (data) {
             $('#page').html(data.render);
         }, function () {
