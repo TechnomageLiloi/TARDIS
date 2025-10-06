@@ -18,8 +18,10 @@ create table umklaidet_config
 
 create table umklaidet_maps
 (
-    key_map varchar(1000) not null,
+    key_map varchar(333) not null,
+    title varchar(100) not null,
     status tinyint unsigned not null default '1',
+    type tinyint unsigned not null,
     program text not null,
     data json not null,
     constraint umklaidet_maps_pk
