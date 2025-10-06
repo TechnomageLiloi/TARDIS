@@ -11,9 +11,9 @@ $config = array_merge([
     'start' => 'Requests.layout();',
     'scripts' => [
     ],
-    'prefix' => 'tardis_'
+    'prefix' => 'umklaidet_'
 ], $private);
 
-$app = new \Liloi\TARDIS\Application($config);
+$app = new \Liloi\UMKLAIDET\Application($config);
 
 echo $app->compile();

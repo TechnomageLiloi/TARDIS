@@ -1,11 +1,11 @@
 <?php
 
-namespace Liloi\TARDIS;
+namespace Liloi\UMKLAIDET;
 
 use Liloi\Config\Pool;
 use Liloi\Config\Sparkle;
-use Liloi\TARDIS\API\Method;
-use Liloi\TARDIS\Domain\Manager as DomainManager;
+use Liloi\UMKLAIDET\API\Method;
+use Liloi\UMKLAIDET\Domain\Manager as DomainManager;
 use Rune\Application\General as GeneralApplication;
 
 /**

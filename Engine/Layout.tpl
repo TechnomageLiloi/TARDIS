@@ -18,7 +18,7 @@
         <script src="<?php echo ROOT_URL; ?>/Engine/API/Dashboard/Requests.js"></script>
         <script src="<?php echo ROOT_URL; ?>/Engine/API/Exercises/Requests.js"></script>
 
-        <title>TARDIS</title>
+        <title>UMKLAIDET</title>
     </head>
     <body>
 
