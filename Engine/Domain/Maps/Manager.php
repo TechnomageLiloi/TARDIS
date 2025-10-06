@@ -94,7 +94,7 @@ class Manager extends DomainManager
     public static function getMapID(): string
     {
         $url = $_SERVER['REQUEST_URI'];
-        $url = str_replace(ROOT_URL, '/', $url);
+        $url = str_replace(ROOT_URL, '', $url);
         $URI = rtrim($url, '/');
 
         if(empty($URI))

@@ -30,7 +30,11 @@ class Entity extends AbstractEntity
 
     public function parse(): string
     {
-        return Parser::parseString($this->getProgram());
+        $program = $this->getProgram();
+
+        $program = preg_replace('/\[(.*?)\]\((.*?)\)/', "<a href='" . ROOT_URL . "$2'>$1</a>", $program);
+
+        return Parser::parseString($program);
     }
 
     public function save(): void
