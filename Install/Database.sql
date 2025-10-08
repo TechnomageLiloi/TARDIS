@@ -1,22 +1,22 @@
-create table umklaidet_logs
+create table tardis_logs
 (
     key_log bigint unsigned auto_increment,
     ts timestamp not null,
     tags varchar(1000) not null,
     data json not null,
-    constraint umklaidet_logs_pk
+    constraint tardis_logs_pk
         primary key (key_log)
 );
 
-create table umklaidet_config
+create table tardis_config
 (
     key_config varchar(100) not null,
     data json not null,
-    constraint umklaidet_config_pk
+    constraint tardis_config_pk
         primary key (key_config)
 );
 
-create table umklaidet_maps
+create table tardis_maps
 (
     key_map varchar(333) not null,
     title varchar(100) not null,
@@ -24,6 +24,6 @@ create table umklaidet_maps
     type tinyint unsigned not null,
     program text not null,
     data json not null,
-    constraint umklaidet_maps_pk
+    constraint tardis_maps_pk
         primary key (key_map)
 );
