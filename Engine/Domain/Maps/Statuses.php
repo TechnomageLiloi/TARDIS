@@ -1,6 +1,6 @@
 <?php
 
-namespace Liloi\TARDIS\Domain\Maps;
+namespace Liloi\UMKLAIDET\Domain\Maps;
 
 class Statuses
 {

@@ -1,9 +1,9 @@
 <?php
 
-namespace Liloi\TARDIS\API\Maps\Create;
+namespace Liloi\UMKLAIDET\API\Maps\Create;
 
-use Liloi\TARDIS\API\Method as SuperMethod;
-use Liloi\TARDIS\Domain\Maps\Manager as DiaryManager;
+use Liloi\UMKLAIDET\API\Method as SuperMethod;
+use Liloi\UMKLAIDET\Domain\Maps\Manager as DiaryManager;
 
 class Method extends SuperMethod
 {

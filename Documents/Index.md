@@ -1,3 +1,3 @@
-# TARDIS Manual
+# UMKLAIDET Manual
 
 [Theory](./Theory.md)
