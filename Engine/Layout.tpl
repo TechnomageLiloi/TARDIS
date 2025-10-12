@@ -16,6 +16,7 @@
 
         <script src="<?php echo ROOT_URL; ?>/Engine/API/Requests.js"></script>
         <script src="<?php echo ROOT_URL; ?>/Engine/API/Maps/Requests.js"></script>
+        <script src="<?php echo ROOT_URL; ?>/Engine/API/Degrees/Requests.js"></script>
 
         <title>UMKLAIDET</title>
     </head>
@@ -23,6 +24,7 @@
 
         <div id="menu">
             <a class="butn" href="javascript:void(0)" onclick="window.location.reload();">Refresh</a>
+            <a class="butn" href="javascript:void(0)" onclick="Requests.Degrees.getCollection();">Degrees</a>
         </div>
 
         <div id="page">

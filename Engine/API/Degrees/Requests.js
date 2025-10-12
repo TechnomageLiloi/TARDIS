@@ -1,4 +1,15 @@
 Requests.Degrees = {
+    getCollection: function ()
+    {
+        API.request('Degrees.Collection', {
+            debug: true
+        }, function (data) {
+            $('#page').html(data.render);
+        }, function () {
+
+        });
+    },
+
     show: function ()
     {
         API.request('Degrees.Show', {
@@ -55,7 +66,7 @@ Requests.Degrees = {
             start: jq_block.find('[name=start]').val(),
             finish: jq_block.find('[name=finish]').val()
         }, function (data) {
-            Requests.Degrees.show();
+            Requests.Degrees.getCollection();
         }, function () {
 
         });

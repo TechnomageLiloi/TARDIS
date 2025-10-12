@@ -9,13 +9,13 @@ class Method extends SuperMethod
 {
     public function execute(): array
     {
-        $entity = DiaryManager::load($_POST['parameters']['key_quest']);
+        $entity = DiaryManager::load($_POST['parameters']['key_degree']);
 
         $entity->setStatus($_POST['parameters']['status']);
-        $entity->setType($_POST['parameters']['type']);
+        $entity->setSummary($_POST['parameters']['summary']);
         $entity->setTitle($_POST['parameters']['title']);
-        $entity->setData($_POST['parameters']['data']);
-        $entity->setProgram($_POST['parameters']['program']);
+        $entity->setStart($_POST['parameters']['start']);
+        $entity->setFinish($_POST['parameters']['finish']);
 
         $entity->save();
 

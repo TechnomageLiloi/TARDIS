@@ -12,14 +12,14 @@ use Liloi\Tools\Entity as AbstractEntity;
  * @method string getStatus()
  * @method void setStatus(string $value)
  *
- * @method string getType()
- * @method void setType(string $value)
+ * @method string getSummary()
+ * @method void setSummary(string $value)
  *
- * @method string getProgram()
- * @method void setProgram(string $value)
+ * @method string getStart()
+ * @method void setStart(string $value)
  *
- * @method string getData()
- * @method void setData(string $value)
+ * @method string getFinish()
+ * @method void setFinish(string $value)
  */
 class Entity extends AbstractEntity
 {
@@ -30,7 +30,7 @@ class Entity extends AbstractEntity
 
     public function parse(): string
     {
-        $program = $this->getProgram();
+        $program = $this->getSummary();
 
         $program = preg_replace('/\[(.*?)\]\((.*?)\)/', "<a href='" . ROOT_URL . "$2'>$1</a>", $program);
 
@@ -50,15 +50,5 @@ class Entity extends AbstractEntity
     public function getStatusTitle(): string
     {
         return Statuses::$list[$this->getStatus()];
-    }
-
-    /**
-     * Gets type caption.
-     *
-     * @return string
-     */
-    public function getTypeTitle(): string
-    {
-        return Types::$list[$this->getType()];
     }
 }
