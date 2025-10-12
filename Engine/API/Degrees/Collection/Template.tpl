@@ -1,5 +1,6 @@
 <style><?php echo file_get_contents(__DIR__ . '/Style.css'); ?></style>
 <div id="application-diary-show" class="stylo">
+    <a href="javascript:void(0)" onclick="Requests.Degrees.create();">Create</a>
     <table>
         <tr>
             <td>Degree</td>
@@ -19,7 +20,7 @@
                 <?php echo $entity->getStatusTitle(); ?>
             </td>
             <td style="text-align: right;">
-                <a href="javascript:void(0)" onclick="Requests.Degrees.edit('<?php echo $entity->getKey(); ?>');">Edit</a>
+                <a href="javascript:void(0)" class="butn" onclick="Requests.Degrees.edit('<?php echo $entity->getKey(); ?>');">Edit</a>
             </td>
         </tr>
         <?php endforeach; ?>

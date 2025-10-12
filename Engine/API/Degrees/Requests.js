@@ -31,7 +31,7 @@ Requests.Degrees = {
         API.request('Degrees.Create', {
             debug: false
         }, function (data) {
-            Requests.Degrees.show();
+            Requests.Degrees.getCollection();
         }, function () {
 
         });

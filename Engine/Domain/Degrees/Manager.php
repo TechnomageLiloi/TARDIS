@@ -21,7 +21,7 @@ class Manager extends DomainManager
         $name = self::getTableName();
 
         $rows = self::getAdapter()->getArray(sprintf(
-            'select * from %s order by key_degree desc limit 17;',
+            'select * from %s order by key_degree asc;',
             $name
         ));
 
