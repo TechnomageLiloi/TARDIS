@@ -27,3 +27,16 @@ create table umklaidet_maps
     constraint umklaidet_maps_pk
         primary key (key_map)
 );
+
+create table umklaidet_degrees
+(
+    key_degree tinyint unsigned auto_increment,
+    title varchar(100) not null,
+    status tinyint unsigned default 1 not null,
+    summary text not null,
+    start date not null,
+    finish date not null,
+    constraint umklaidet_degrees_pk
+        primary key (key_degree)
+);
+
