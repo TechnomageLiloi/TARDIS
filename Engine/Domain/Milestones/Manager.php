@@ -3,6 +3,7 @@
 namespace Liloi\BOYARD\Domain\Milestones;
 
 use Liloi\BOYARD\Domain\Manager as DomainManager;
+use Liloi\BOYARD\Domain\Levels\Manager as LevelsManager;
 
 class Manager extends DomainManager
 {
@@ -78,6 +79,7 @@ class Manager extends DomainManager
     public static function create(): Entity
     {
         $data = [
+            'key_level' => LevelsManager::getHighestLevel(),
             'title' => 'Enter the title',
             'status' => Statuses::TODO,
             'summary' => 'Enter the summary',

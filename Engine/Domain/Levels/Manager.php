@@ -89,4 +89,21 @@ class Manager extends DomainManager
 
         return Entity::create($data);
     }
+
+    public static function getHighestLevel(): int
+    {
+        $name = self::getTableName();
+
+        $level = self::getAdapter()->getSingle(sprintf(
+            'select key_level from %s where status="%s" order by key_level desc;',
+            $name, Statuses::DEFENDED
+        ));
+
+        if(!$level)
+        {
+            return 0;
+        }
+
+        return $level;
+    }
 }
