@@ -1,3 +1,3 @@
-# UMKLAIDET Manual
+# BOYARD Manual
 
 [Theory](./Theory.md)

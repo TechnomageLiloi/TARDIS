@@ -1,6 +1,6 @@
 <?php
 
-namespace Liloi\UMKLAIDET\Domain\Maps;
+namespace Liloi\BOYARD\Domain\Maps;
 
 use Liloi\Stylo\Parser;
 use Liloi\Tools\Entity as AbstractEntity;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Liloi\UMKLAIDET\Domain\Degrees;
+namespace Liloi\BOYARD\Domain\Degrees;
 
 use Liloi\Stylo\Parser;
 use Liloi\Tools\Entity as AbstractEntity;

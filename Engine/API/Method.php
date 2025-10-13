@@ -1,6 +1,6 @@
 <?php
 
-namespace Liloi\UMKLAIDET\API;
+namespace Liloi\BOYARD\API;
 
 /**
  * Abstract API method.

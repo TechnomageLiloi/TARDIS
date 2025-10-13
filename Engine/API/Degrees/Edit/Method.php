@@ -1,10 +1,10 @@
 <?php
 
-namespace Liloi\UMKLAIDET\API\Degrees\Edit;
+namespace Liloi\BOYARD\API\Degrees\Edit;
 
-use Liloi\UMKLAIDET\API\Method as SuperMethod;
-use Liloi\UMKLAIDET\Domain\Degrees\Manager as DiaryManager;
-use Liloi\UMKLAIDET\Domain\Degrees\Statuses as DegreesStatuses;
+use Liloi\BOYARD\API\Method as SuperMethod;
+use Liloi\BOYARD\Domain\Degrees\Manager as DiaryManager;
+use Liloi\BOYARD\Domain\Degrees\Statuses as DegreesStatuses;
 
 /**
  * Rune API: Interstate60.Application.Diary.Edit

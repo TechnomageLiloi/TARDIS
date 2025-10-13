@@ -1,6 +1,6 @@
 <?php
 
-namespace Liloi\UMKLAIDET\Domain\Maps;
+namespace Liloi\BOYARD\Domain\Maps;
 
 use Liloi\Tools\Collection as AbstractCollection;
 

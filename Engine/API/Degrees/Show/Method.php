@@ -1,9 +1,9 @@
 <?php
 
-namespace Liloi\UMKLAIDET\API\Degrees\Show;
+namespace Liloi\BOYARD\API\Degrees\Show;
 
-use Liloi\UMKLAIDET\API\Method as SuperMethod;
-use Liloi\UMKLAIDET\Domain\Degrees\Manager as DiaryManager;
+use Liloi\BOYARD\API\Method as SuperMethod;
+use Liloi\BOYARD\Domain\Degrees\Manager as DiaryManager;
 
 class Method extends SuperMethod
 {

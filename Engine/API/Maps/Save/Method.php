@@ -1,9 +1,9 @@
 <?php
 
-namespace Liloi\UMKLAIDET\API\Maps\Save;
+namespace Liloi\BOYARD\API\Maps\Save;
 
-use Liloi\UMKLAIDET\API\Method as SuperMethod;
-use Liloi\UMKLAIDET\Domain\Maps\Manager as DiaryManager;
+use Liloi\BOYARD\API\Method as SuperMethod;
+use Liloi\BOYARD\Domain\Maps\Manager as DiaryManager;
 
 class Method extends SuperMethod
 {

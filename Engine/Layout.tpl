@@ -18,7 +18,7 @@
         <script src="<?php echo ROOT_URL; ?>/Engine/API/Maps/Requests.js"></script>
         <script src="<?php echo ROOT_URL; ?>/Engine/API/Degrees/Requests.js"></script>
 
-        <title>UMKLAIDET</title>
+        <title>BOYARD</title>
     </head>
     <body>
 
