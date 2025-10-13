@@ -53,7 +53,7 @@ CREATE TABLE `fort_levels` (
   `start` date NOT NULL,
   `finish` date NOT NULL,
   PRIMARY KEY (`key_level`)
-) ENGINE=InnoDB DEFAULT CHARSET=cp1251;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=cp1251;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -62,6 +62,7 @@ CREATE TABLE `fort_levels` (
 
 LOCK TABLES `fort_levels` WRITE;
 /*!40000 ALTER TABLE `fort_levels` DISABLE KEYS */;
+INSERT INTO `fort_levels` VALUES (1,'Dreamer',2,'Enter the summary','2025-10-11','2026-10-13');
 /*!40000 ALTER TABLE `fort_levels` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -114,7 +115,39 @@ CREATE TABLE `fort_maps` (
 
 LOCK TABLES `fort_maps` WRITE;
 /*!40000 ALTER TABLE `fort_maps` DISABLE KEYS */;
+INSERT INTO `fort_maps` VALUES (':','Маяк',2,1,'Спуститися на:\n[Рівень 1](/Library) (бібліотека)','{}');
+INSERT INTO `fort_maps` VALUES (':Library','Рівень 1 - Бібліотека',2,1,'[Піднятись](/) до Маяка','{}');
 /*!40000 ALTER TABLE `fort_maps` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `fort_milestones`
+--
+
+DROP TABLE IF EXISTS `fort_milestones`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `fort_milestones` (
+  `key_milestone` smallint unsigned NOT NULL AUTO_INCREMENT,
+  `key_level` tinyint unsigned NOT NULL,
+  `title` varchar(100) NOT NULL,
+  `status` tinyint unsigned NOT NULL DEFAULT '1',
+  `summary` text NOT NULL,
+  `start` date NOT NULL,
+  `finish` date NOT NULL,
+  PRIMARY KEY (`key_milestone`),
+  KEY `fort_milestones_fort_levels_key_level_fk` (`key_level`),
+  CONSTRAINT `fort_milestones_fort_levels_key_level_fk` FOREIGN KEY (`key_level`) REFERENCES `fort_levels` (`key_level`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=cp1251;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `fort_milestones`
+--
+
+LOCK TABLES `fort_milestones` WRITE;
+/*!40000 ALTER TABLE `fort_milestones` DISABLE KEYS */;
+/*!40000 ALTER TABLE `fort_milestones` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -126,4 +159,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-10-13 14:59:39
+-- Dump completed on 2025-10-14  2:22:32
