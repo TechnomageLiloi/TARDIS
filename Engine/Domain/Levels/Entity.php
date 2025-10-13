@@ -1,6 +1,6 @@
 <?php
 
-namespace Liloi\BOYARD\Domain\Degrees;
+namespace Liloi\BOYARD\Domain\Levels;
 
 use Liloi\Stylo\Parser;
 use Liloi\Tools\Entity as AbstractEntity;
@@ -25,7 +25,7 @@ class Entity extends AbstractEntity
 {
     public function getKey(): string
     {
-        return $this->getField('key_degree');
+        return $this->getField('key_level');
     }
 
     public function parse(): string

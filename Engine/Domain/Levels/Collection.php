@@ -1,6 +1,6 @@
 <?php
 
-namespace Liloi\BOYARD\Domain\Degrees;
+namespace Liloi\BOYARD\Domain\Levels;
 
 use Liloi\Tools\Collection as AbstractCollection;
 

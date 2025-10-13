@@ -1,6 +1,6 @@
 <?php
 
-namespace Liloi\BOYARD\Domain\Degrees;
+namespace Liloi\BOYARD\Domain\Levels;
 
 use Liloi\BOYARD\Domain\Manager as DomainManager;
 
@@ -13,7 +13,7 @@ class Manager extends DomainManager
      */
     public static function getTableName(): string
     {
-        return self::getTablePrefix() . 'degrees';
+        return self::getTablePrefix() . 'levels';
     }
 
     public static function loadCollection(): Collection
@@ -21,7 +21,7 @@ class Manager extends DomainManager
         $name = self::getTableName();
 
         $rows = self::getAdapter()->getArray(sprintf(
-            'select * from %s order by key_degree asc;',
+            'select * from %s order by key_level asc;',
             $name
         ));
 
@@ -38,21 +38,21 @@ class Manager extends DomainManager
     /**
      * Load day by key.
      *
-     * @param string $keyDegree
+     * @param string $keyLevel
      * @return Entity
      */
-    public static function load(string $keyDegree): Entity
+    public static function load(string $keyLevel): Entity
     {
         $name = self::getTableName();
 
         $row = self::getAdapter()->getRow(sprintf(
-            'select * from %s where key_degree="%s";',
-            $name, $keyDegree
+            'select * from %s where key_level="%s";',
+            $name, $keyLevel
         ));
 
         if(!$row)
         {
-            self::create($keyDegree);
+            self::create();
         }
 
         return Entity::create($row);
@@ -67,9 +67,9 @@ class Manager extends DomainManager
     {
         $name = self::getTableName();
         $data = $entity->get();
-        unset($data['key_degree']);
+        unset($data['key_level']);
 
-        self::update($name, $data, sprintf('key_degree="%s"', $entity->getKey()));
+        self::update($name, $data, sprintf('key_level="%s"', $entity->getKey()));
     }
 
     /**
