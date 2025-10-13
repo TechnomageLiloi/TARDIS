@@ -1,6 +1,6 @@
 <?php
 
-namespace Liloi\BOYARD\Domain\Levels;
+namespace Liloi\BOYARD\Domain\Milestones;
 
 use Liloi\Stylo\Parser;
 use Liloi\Tools\Entity as AbstractEntity;
@@ -24,6 +24,11 @@ use Liloi\Tools\Entity as AbstractEntity;
 class Entity extends AbstractEntity
 {
     public function getKey(): string
+    {
+        return $this->getField('key_milestone');
+    }
+
+    public function getKeyLevels(): string
     {
         return $this->getField('key_level');
     }
