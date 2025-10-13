@@ -1,7 +1,7 @@
-Requests.Degrees = {
+Requests.Levels = {
     getCollection: function ()
     {
-        API.request('Degrees.Collection', {
+        API.request('Levels.Collection', {
             debug: true
         }, function (data) {
             $('#page').html(data.render);
@@ -12,7 +12,7 @@ Requests.Degrees = {
 
     show: function ()
     {
-        API.request('Degrees.Show', {
+        API.request('Levels.Show', {
             debug: true
         }, function (data) {
             $('#page').html(data.render);
@@ -28,19 +28,19 @@ Requests.Degrees = {
             return;
         }
 
-        API.request('Degrees.Create', {
+        API.request('Levels.Create', {
             debug: false
         }, function (data) {
-            Requests.Degrees.getCollection();
+            Requests.Levels.getCollection();
         }, function () {
 
         });
     },
 
-    edit: function (key_degree)
+    edit: function (key_level)
     {
-        API.request('Degrees.Edit', {
-            key_degree: key_degree
+        API.request('Levels.Edit', {
+            key_level: key_level
         }, function (data) {
             const wrap = $('#page');
             wrap.html(data.render);
@@ -50,7 +50,7 @@ Requests.Degrees = {
         });
     },
 
-    save: function (key_degree)
+    save: function (key_level)
     {
         if(!confirm('Are you sure?'))
         {
@@ -58,15 +58,15 @@ Requests.Degrees = {
         }
 
         const jq_block = $('#application-diary-edit');
-        API.request('Degrees.Save', {
-            key_degree: key_degree,
+        API.request('Levels.Save', {
+            key_level: key_level,
             title: jq_block.find('[name=title]').val(),
             status: jq_block.find('[name=status]').val(),
             summary: jq_block.find('[name=summary]').val(),
             start: jq_block.find('[name=start]').val(),
             finish: jq_block.find('[name=finish]').val()
         }, function (data) {
-            Requests.Degrees.getCollection();
+            Requests.Levels.getCollection();
         }, function () {
 
         });

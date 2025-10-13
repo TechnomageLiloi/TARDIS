@@ -16,7 +16,7 @@
 
         <script src="<?php echo ROOT_URL; ?>/Engine/API/Requests.js"></script>
         <script src="<?php echo ROOT_URL; ?>/Engine/API/Maps/Requests.js"></script>
-        <script src="<?php echo ROOT_URL; ?>/Engine/API/Degrees/Requests.js"></script>
+        <script src="<?php echo ROOT_URL; ?>/Engine/API/Levels/Requests.js"></script>
 
         <title>BOYARD</title>
     </head>
@@ -24,7 +24,7 @@
 
         <div id="menu">
             <a class="butn" href="javascript:void(0)" onclick="window.location.reload();">Refresh</a>
-            <a class="butn" href="javascript:void(0)" onclick="Requests.Degrees.getCollection();">Degrees</a>
+            <a class="butn" href="javascript:void(0)" onclick="Requests.Levels.getCollection();">Levels</a>
         </div>
 
         <div id="page">

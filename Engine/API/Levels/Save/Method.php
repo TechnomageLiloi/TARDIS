@@ -1,15 +1,15 @@
 <?php
 
-namespace Liloi\BOYARD\API\Degrees\Save;
+namespace Liloi\BOYARD\API\Levels\Save;
 
 use Liloi\BOYARD\API\Method as SuperMethod;
-use Liloi\BOYARD\Domain\Degrees\Manager as DiaryManager;
+use Liloi\BOYARD\Domain\Levels\Manager as DiaryManager;
 
 class Method extends SuperMethod
 {
     public function execute(): array
     {
-        $entity = DiaryManager::load($_POST['parameters']['key_degree']);
+        $entity = DiaryManager::load($_POST['parameters']['key_level']);
 
         $entity->setStatus($_POST['parameters']['status']);
         $entity->setSummary($_POST['parameters']['summary']);

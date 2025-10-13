@@ -1,7 +1,7 @@
-<link href="/API/Degrees/Edit/Style.css" rel="stylesheet" />
+<link href="/API/Levels/Edit/Style.css" rel="stylesheet" />
 <div id="application-diary-edit">
-    <a class="butn" href="javascript:void(0)" onclick="Requests.Degrees.save('<?php echo $entity->getKey(); ?>');">Save</a>
-    <a class="butn" href="javascript:void(0)" onclick="Requests.Degrees.show('<?php echo $entity->getKey(); ?>');">Cancel</a>
+    <a class="butn" href="javascript:void(0)" onclick="Requests.Levels.save('<?php echo $entity->getKey(); ?>');">Save</a>
+    <a class="butn" href="javascript:void(0)" onclick="Requests.Levels.show('<?php echo $entity->getKey(); ?>');">Cancel</a>
     <hr/>
     <table>
 
@@ -42,6 +42,6 @@
 
     </table>
     <hr/>
-    <a class="butn" href="javascript:void(0)" onclick="Requests.Degrees.save('<?php echo $entity->getKey(); ?>');">Save</a>
-    <a class="butn" href="javascript:void(0)" onclick="Requests.Degrees.show('<?php echo $entity->getKey(); ?>');">Cancel</a>
+    <a class="butn" href="javascript:void(0)" onclick="Requests.Levels.save('<?php echo $entity->getKey(); ?>');">Save</a>
+    <a class="butn" href="javascript:void(0)" onclick="Requests.Levels.show('<?php echo $entity->getKey(); ?>');">Cancel</a>
 </div>
