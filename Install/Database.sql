@@ -28,15 +28,15 @@ create table fort_maps
         primary key (key_map)
 );
 
-create table fort_degrees
+create table fort_levels
 (
-    key_degree tinyint unsigned auto_increment,
+    key_level tinyint unsigned auto_increment,
     title varchar(100) not null,
     status tinyint unsigned default 1 not null,
     summary text not null,
     start date not null,
     finish date not null,
-    constraint fort_degrees_pk
-        primary key (key_degree)
+    constraint fort_levels_pk
+        primary key (key_level)
 );
 
