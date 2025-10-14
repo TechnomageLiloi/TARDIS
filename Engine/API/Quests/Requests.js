@@ -63,8 +63,7 @@ Requests.Quests = {
             title: jq_block.find('[name=title]').val(),
             status: jq_block.find('[name=status]').val(),
             summary: jq_block.find('[name=summary]').val(),
-            start: jq_block.find('[name=start]').val(),
-            finish: jq_block.find('[name=finish]').val()
+            data: jq_block.find('[name=data]').val()
         }, function (data) {
             Requests.Quests.getCollection();
         }, function () {

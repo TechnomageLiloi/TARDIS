@@ -17,20 +17,6 @@
         </tr>
 
         <tr>
-            <td>Start</td>
-            <td>
-                <input name="start" type="text" value="<?php echo $entity->getStart(); ?>" />
-            </td>
-        </tr>
-
-        <tr>
-            <td>Finish</td>
-            <td>
-                <input name="finish" type="text" value="<?php echo $entity->getFinish(); ?>" />
-            </td>
-        </tr>
-
-        <tr>
             <td>Title</td>
             <td>
                 <input name="title" type="text" value="<?php echo $entity->getTitle(); ?>" />
@@ -38,6 +24,8 @@
         </tr>
 
         <tr><td>Summary</td><td><textarea name="summary"><?php echo $entity->getSummary(); ?></textarea></td></tr>
+
+        <tr><td>Data</td><td><textarea name="data"><?php echo $entity->getData(); ?></textarea></td></tr>
 
 
     </table>

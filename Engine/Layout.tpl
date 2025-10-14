@@ -18,6 +18,7 @@
         <script src="<?php echo ROOT_URL; ?>/Engine/API/Maps/Requests.js"></script>
         <script src="<?php echo ROOT_URL; ?>/Engine/API/Levels/Requests.js"></script>
         <script src="<?php echo ROOT_URL; ?>/Engine/API/Milestones/Requests.js"></script>
+        <script src="<?php echo ROOT_URL; ?>/Engine/API/Quests/Requests.js"></script>
 
         <title>BOYARD</title>
     </head>
@@ -27,6 +28,7 @@
             <a class="butn" href="javascript:void(0)" onclick="window.location.reload();">Refresh</a>
             <a class="butn" href="javascript:void(0)" onclick="Requests.Levels.getCollection();">Levels</a>
             <a class="butn" href="javascript:void(0)" onclick="Requests.Milestones.getCollection();">Milestones</a>
+            <a class="butn" href="javascript:void(0)" onclick="Requests.Quests.getCollection();">Quests</a>
         </div>
 
         <div id="page">

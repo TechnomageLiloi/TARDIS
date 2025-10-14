@@ -22,7 +22,7 @@ class Manager extends DomainManager
         $name = self::getTableName();
 
         $rows = self::getAdapter()->getArray(sprintf(
-            'select * from %s order by key_milestone asc;',
+            'select * from %s order by key_milestone desc;',
             $name
         ));
 
@@ -90,5 +90,22 @@ class Manager extends DomainManager
         self::getAdapter()->insert(self::getTableName(), $data);
 
         return Entity::create($data);
+    }
+
+    public static function getHighestMilestone(): int
+    {
+        $name = self::getTableName();
+
+        $milestone = self::getAdapter()->getSingle(sprintf(
+            'select key_milestone from %s where status="%s" order by key_milestone desc;',
+            $name, Statuses::IN_HAND
+        ));
+
+        if(!$milestone)
+        {
+            return 0;
+        }
+
+        return $milestone;
     }
 }

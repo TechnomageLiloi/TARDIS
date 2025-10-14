@@ -4,6 +4,7 @@ namespace Liloi\BOYARD\Domain\Quests;
 
 use Liloi\BOYARD\Domain\Manager as DomainManager;
 use Liloi\BOYARD\Domain\Levels\Manager as LevelsManager;
+use Liloi\BOYARD\Domain\Milestones\Manager as MilestonesManager;
 
 class Manager extends DomainManager
 {
@@ -80,11 +81,11 @@ class Manager extends DomainManager
     {
         $data = [
             'key_level' => LevelsManager::getHighestLevel(),
+            'key_milestone' => MilestonesManager::getHighestMilestone(),
             'title' => 'Enter the title',
             'status' => Statuses::TODO,
             'summary' => 'Enter the summary',
-            'start' => date('Y-m-d'),
-            'finish' => date('Y-m-d', strtotime('+1 year'))
+            'data' => '{}'
         ];
 
         self::getAdapter()->insert(self::getTableName(), $data);

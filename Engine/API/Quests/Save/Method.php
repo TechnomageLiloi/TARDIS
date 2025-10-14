@@ -14,8 +14,7 @@ class Method extends SuperMethod
         $entity->setStatus($_POST['parameters']['status']);
         $entity->setSummary($_POST['parameters']['summary']);
         $entity->setTitle($_POST['parameters']['title']);
-        $entity->setStart($_POST['parameters']['start']);
-        $entity->setFinish($_POST['parameters']['finish']);
+        $entity->setData($_POST['parameters']['data']);
 
         $entity->save();
 
