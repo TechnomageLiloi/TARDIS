@@ -1,6 +1,6 @@
 <?php
 
-namespace Liloi\BOYARD\Domain\Quests;
+namespace Liloi\UMKLAIDET\Domain\Quests;
 
 use Liloi\Stylo\Parser;
 use Liloi\Tools\Entity as AbstractEntity;

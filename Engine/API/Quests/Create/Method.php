@@ -1,9 +1,9 @@
 <?php
 
-namespace Liloi\BOYARD\API\Quests\Create;
+namespace Liloi\UMKLAIDET\API\Quests\Create;
 
-use Liloi\BOYARD\API\Method as SuperMethod;
-use Liloi\BOYARD\Domain\Quests\Manager as DiaryManager;
+use Liloi\UMKLAIDET\API\Method as SuperMethod;
+use Liloi\UMKLAIDET\Domain\Quests\Manager as DiaryManager;
 
 class Method extends SuperMethod
 {

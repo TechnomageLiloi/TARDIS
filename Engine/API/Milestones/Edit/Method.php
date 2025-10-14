@@ -1,10 +1,10 @@
 <?php
 
-namespace Liloi\BOYARD\API\Milestones\Edit;
+namespace Liloi\UMKLAIDET\API\Milestones\Edit;
 
-use Liloi\BOYARD\API\Method as SuperMethod;
-use Liloi\BOYARD\Domain\Milestones\Manager as DiaryManager;
-use Liloi\BOYARD\Domain\Milestones\Statuses as MilestonesStatuses;
+use Liloi\UMKLAIDET\API\Method as SuperMethod;
+use Liloi\UMKLAIDET\Domain\Milestones\Manager as DiaryManager;
+use Liloi\UMKLAIDET\Domain\Milestones\Statuses as MilestonesStatuses;
 
 /**
  * Rune API: Interstate60.Application.Diary.Edit

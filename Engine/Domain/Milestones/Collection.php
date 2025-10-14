@@ -1,6 +1,6 @@
 <?php
 
-namespace Liloi\BOYARD\Domain\Milestones;
+namespace Liloi\UMKLAIDET\Domain\Milestones;
 
 use Liloi\Tools\Collection as AbstractCollection;
 

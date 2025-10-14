@@ -1,9 +1,9 @@
 <?php
 
-namespace Liloi\BOYARD\Domain\Milestones;
+namespace Liloi\UMKLAIDET\Domain\Milestones;
 
-use Liloi\BOYARD\Domain\Manager as DomainManager;
-use Liloi\BOYARD\Domain\Levels\Manager as LevelsManager;
+use Liloi\UMKLAIDET\Domain\Manager as DomainManager;
+use Liloi\UMKLAIDET\Domain\Levels\Manager as LevelsManager;
 
 class Manager extends DomainManager
 {

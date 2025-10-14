@@ -1,6 +1,6 @@
 <?php
 
-namespace Liloi\BOYARD\Domain\Quests;
+namespace Liloi\UMKLAIDET\Domain\Quests;
 
 use Liloi\Tools\Collection as AbstractCollection;
 

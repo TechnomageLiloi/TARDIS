@@ -1,9 +1,9 @@
 <?php
 
-namespace Liloi\BOYARD\API\Levels\Show;
+namespace Liloi\UMKLAIDET\API\Levels\Show;
 
-use Liloi\BOYARD\API\Method as SuperMethod;
-use Liloi\BOYARD\Domain\Levels\Manager as DiaryManager;
+use Liloi\UMKLAIDET\API\Method as SuperMethod;
+use Liloi\UMKLAIDET\Domain\Levels\Manager as DiaryManager;
 
 class Method extends SuperMethod
 {

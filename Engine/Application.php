@@ -1,11 +1,11 @@
 <?php
 
-namespace Liloi\BOYARD;
+namespace Liloi\UMKLAIDET;
 
 use Liloi\Config\Pool;
 use Liloi\Config\Sparkle;
-use Liloi\BOYARD\API\Method;
-use Liloi\BOYARD\Domain\Manager as DomainManager;
+use Liloi\UMKLAIDET\API\Method;
+use Liloi\UMKLAIDET\Domain\Manager as DomainManager;
 use Rune\Application\General as GeneralApplication;
 
 /**
@@ -57,7 +57,7 @@ class Application extends GeneralApplication
             return $this->$name($parameters);
         }
 
-        $classMethod = 'Liloi\\BOYARD\\API\\' . ucfirst(str_replace('.', '\\', $name)) . '\\Method';
+        $classMethod = 'Liloi\\UMKLAIDET\\API\\' . ucfirst(str_replace('.', '\\', $name)) . '\\Method';
 
         if(class_exists($classMethod))
         {

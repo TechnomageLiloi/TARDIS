@@ -1,11 +1,11 @@
 <?php
 
-namespace Liloi\BOYARD\API\Maps\Edit;
+namespace Liloi\UMKLAIDET\API\Maps\Edit;
 
-use Liloi\BOYARD\API\Method as SuperMethod;
-use Liloi\BOYARD\Domain\Maps\Manager as DiaryManager;
-use Liloi\BOYARD\Domain\Maps\Statuses as MapsStatuses;
-use Liloi\BOYARD\Domain\Maps\Types as MapsTypes;
+use Liloi\UMKLAIDET\API\Method as SuperMethod;
+use Liloi\UMKLAIDET\Domain\Maps\Manager as DiaryManager;
+use Liloi\UMKLAIDET\Domain\Maps\Statuses as MapsStatuses;
+use Liloi\UMKLAIDET\Domain\Maps\Types as MapsTypes;
 
 /**
  * Rune API: Interstate60.Application.Diary.Edit

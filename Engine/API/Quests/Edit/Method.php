@@ -1,10 +1,10 @@
 <?php
 
-namespace Liloi\BOYARD\API\Quests\Edit;
+namespace Liloi\UMKLAIDET\API\Quests\Edit;
 
-use Liloi\BOYARD\API\Method as SuperMethod;
-use Liloi\BOYARD\Domain\Quests\Manager as DiaryManager;
-use Liloi\BOYARD\Domain\Quests\Statuses as QuestsStatuses;
+use Liloi\UMKLAIDET\API\Method as SuperMethod;
+use Liloi\UMKLAIDET\Domain\Quests\Manager as DiaryManager;
+use Liloi\UMKLAIDET\Domain\Quests\Statuses as QuestsStatuses;
 
 /**
  * Rune API: Interstate60.Application.Diary.Edit

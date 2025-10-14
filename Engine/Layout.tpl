@@ -20,7 +20,7 @@
         <script src="<?php echo ROOT_URL; ?>/Engine/API/Milestones/Requests.js"></script>
         <script src="<?php echo ROOT_URL; ?>/Engine/API/Quests/Requests.js"></script>
 
-        <title>BOYARD</title>
+        <title>UMKLAIDET</title>
     </head>
     <body>
 

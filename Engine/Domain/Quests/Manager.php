@@ -1,10 +1,10 @@
 <?php
 
-namespace Liloi\BOYARD\Domain\Quests;
+namespace Liloi\UMKLAIDET\Domain\Quests;
 
-use Liloi\BOYARD\Domain\Manager as DomainManager;
-use Liloi\BOYARD\Domain\Levels\Manager as LevelsManager;
-use Liloi\BOYARD\Domain\Milestones\Manager as MilestonesManager;
+use Liloi\UMKLAIDET\Domain\Manager as DomainManager;
+use Liloi\UMKLAIDET\Domain\Levels\Manager as LevelsManager;
+use Liloi\UMKLAIDET\Domain\Milestones\Manager as MilestonesManager;
 
 class Manager extends DomainManager
 {

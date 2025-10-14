@@ -1,9 +1,9 @@
 <?php
 
-namespace Liloi\BOYARD\API\Milestones\Create;
+namespace Liloi\UMKLAIDET\API\Milestones\Create;
 
-use Liloi\BOYARD\API\Method as SuperMethod;
-use Liloi\BOYARD\Domain\Milestones\Manager as DiaryManager;
+use Liloi\UMKLAIDET\API\Method as SuperMethod;
+use Liloi\UMKLAIDET\Domain\Milestones\Manager as DiaryManager;
 
 class Method extends SuperMethod
 {

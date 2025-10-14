@@ -8,13 +8,13 @@ $private = json_decode(file_get_contents(__DIR__ . '/Config/Private.json'), true
 define('ROOT_URL', $private['root']);
 
 $config = array_merge([
-    'title' => 'BOYARD',
+    'title' => 'UMKLAIDET',
     'start' => 'Requests.layout();',
     'scripts' => [
     ],
     'prefix' => 'fort_'
 ], $private);
 
-$app = new \Liloi\BOYARD\Application($config);
+$app = new \Liloi\UMKLAIDET\Application($config);
 
 echo $app->compile();
