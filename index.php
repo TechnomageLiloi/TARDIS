@@ -12,7 +12,7 @@ $config = array_merge([
     'start' => 'Requests.layout();',
     'scripts' => [
     ],
-    'prefix' => 'fort_'
+    'prefix' => 'umklaidet_'
 ], $private);
 
 $app = new \Liloi\UMKLAIDET\Application($config);
