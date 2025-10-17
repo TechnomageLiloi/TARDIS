@@ -1,9 +1,3 @@
--- MySQL dump 10.13  Distrib 8.0.43, for Linux (x86_64)
---
--- Host: mysql324.1gb.ua    Database: gbua_tm_liloi
--- ------------------------------------------------------
--- Server version	8.4.0
-
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
@@ -30,15 +24,6 @@ CREATE TABLE `tardis_config` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `tardis_config`
---
-
-LOCK TABLES `tardis_config` WRITE;
-/*!40000 ALTER TABLE `tardis_config` DISABLE KEYS */;
-/*!40000 ALTER TABLE `tardis_config` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `tardis_levels`
 --
 
@@ -57,17 +42,6 @@ CREATE TABLE `tardis_levels` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `tardis_levels`
---
-
-LOCK TABLES `tardis_levels` WRITE;
-/*!40000 ALTER TABLE `tardis_levels` DISABLE KEYS */;
-INSERT INTO `tardis_levels` VALUES (1,'Dreamer',3,'Enter the summary','2025-10-11','2026-10-13');
-INSERT INTO `tardis_levels` VALUES (2,'Gamer',2,'-','2025-10-14','2026-10-14');
-/*!40000 ALTER TABLE `tardis_levels` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `tardis_logs`
 --
 
@@ -82,15 +56,6 @@ CREATE TABLE `tardis_logs` (
   PRIMARY KEY (`key_log`)
 ) ENGINE=InnoDB DEFAULT CHARSET=cp1251;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `tardis_logs`
---
-
-LOCK TABLES `tardis_logs` WRITE;
-/*!40000 ALTER TABLE `tardis_logs` DISABLE KEYS */;
-/*!40000 ALTER TABLE `tardis_logs` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `tardis_maps`
@@ -109,17 +74,6 @@ CREATE TABLE `tardis_maps` (
   PRIMARY KEY (`key_map`)
 ) ENGINE=InnoDB DEFAULT CHARSET=cp1251;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `tardis_maps`
---
-
-LOCK TABLES `tardis_maps` WRITE;
-/*!40000 ALTER TABLE `tardis_maps` DISABLE KEYS */;
-INSERT INTO `tardis_maps` VALUES (':','Маяк',2,1,'Спуститися на:\n[Рівень 1](/Library) (бібліотека)','{}');
-INSERT INTO `tardis_maps` VALUES (':Library','Рівень 1 - Бібліотека',2,1,'[Піднятись](/) до Маяка','{}');
-/*!40000 ALTER TABLE `tardis_maps` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `tardis_milestones`
@@ -143,16 +97,6 @@ CREATE TABLE `tardis_milestones` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `tardis_milestones`
---
-
-LOCK TABLES `tardis_milestones` WRITE;
-/*!40000 ALTER TABLE `tardis_milestones` DISABLE KEYS */;
-INSERT INTO `tardis_milestones` VALUES (1,1,'Віха: Флорія Тоска #1',2,'-','2025-10-14','2026-10-19');
-/*!40000 ALTER TABLE `tardis_milestones` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `tardis_quests`
 --
 
@@ -174,15 +118,6 @@ CREATE TABLE `tardis_quests` (
   CONSTRAINT `tardis_quests_tardis_milestones_key_milestone_fk` FOREIGN KEY (`key_milestone`) REFERENCES `tardis_milestones` (`key_milestone`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=cp1251;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `tardis_quests`
---
-
-LOCK TABLES `tardis_quests` WRITE;
-/*!40000 ALTER TABLE `tardis_quests` DISABLE KEYS */;
-/*!40000 ALTER TABLE `tardis_quests` ENABLE KEYS */;
-UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -193,4 +128,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-10-14  3:40:54
+-- Dump completed on 2025-10-17  5:15:05
