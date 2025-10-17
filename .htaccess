@@ -12,12 +12,3 @@ RewriteRule ^(.*)$ %{ENV:BASE}/index.php [L]
 <Files .htpasswd>
    deny from all
 </Files>
-
-<Files .gitmodules>
-   deny from all
-</Files>
-
-AuthType basic
-AuthName "liloi"
-AuthUserFile /home/virtwww/w_liloi-inf-ua_7053adcf/http/.htpasswd
-Require valid-user
