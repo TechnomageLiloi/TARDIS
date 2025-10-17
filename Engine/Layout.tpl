@@ -20,7 +20,7 @@
         <script src="<?php echo ROOT_URL; ?>/Engine/API/Milestones/Requests.js"></script>
         <script src="<?php echo ROOT_URL; ?>/Engine/API/Quests/Requests.js"></script>
 
-        <title>UMKLAIDET</title>
+        <title>TARDIS</title>
     </head>
     <body>
 

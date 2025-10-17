@@ -1,9 +1,9 @@
 <?php
 
-namespace Liloi\UMKLAIDET\API\Milestones\Show;
+namespace Liloi\TARDIS\API\Milestones\Show;
 
-use Liloi\UMKLAIDET\API\Method as SuperMethod;
-use Liloi\UMKLAIDET\Domain\Milestones\Manager as DiaryManager;
+use Liloi\TARDIS\API\Method as SuperMethod;
+use Liloi\TARDIS\Domain\Milestones\Manager as DiaryManager;
 
 class Method extends SuperMethod
 {

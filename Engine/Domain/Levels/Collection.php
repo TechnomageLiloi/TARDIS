@@ -1,6 +1,6 @@
 <?php
 
-namespace Liloi\UMKLAIDET\Domain\Levels;
+namespace Liloi\TARDIS\Domain\Levels;
 
 use Liloi\Tools\Collection as AbstractCollection;
 

@@ -1,10 +1,10 @@
 <?php
 
-namespace Liloi\UMKLAIDET\API\Levels\Edit;
+namespace Liloi\TARDIS\API\Levels\Edit;
 
-use Liloi\UMKLAIDET\API\Method as SuperMethod;
-use Liloi\UMKLAIDET\Domain\Levels\Manager as DiaryManager;
-use Liloi\UMKLAIDET\Domain\Levels\Statuses as LevelsStatuses;
+use Liloi\TARDIS\API\Method as SuperMethod;
+use Liloi\TARDIS\Domain\Levels\Manager as DiaryManager;
+use Liloi\TARDIS\Domain\Levels\Statuses as LevelsStatuses;
 
 /**
  * Rune API: Interstate60.Application.Diary.Edit

@@ -1,6 +1,6 @@
 <?php
 
-namespace Liloi\UMKLAIDET\Domain\Quests;
+namespace Liloi\TARDIS\Domain\Quests;
 
 class Statuses
 {

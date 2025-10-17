@@ -1,6 +1,6 @@
 <?php
 
-namespace Liloi\UMKLAIDET\Domain\Milestones;
+namespace Liloi\TARDIS\Domain\Milestones;
 
 class Statuses
 {
