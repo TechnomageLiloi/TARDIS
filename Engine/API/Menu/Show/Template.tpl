@@ -7,5 +7,5 @@
         }
     </style>
     <h1>TARDIS</h1>
-    <a href="/TARDIS">Start</a>
+    <a href="/Index">Start</a>
 </div>
