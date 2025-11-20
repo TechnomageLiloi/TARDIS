@@ -7,7 +7,7 @@
         <hr/>
     </div>
     <?php endif; ?>
-    <h1 style="text-align: center;">
+    <h1 style="text-align: center;" class="title">
         <?php echo $entity->getTitle(); ?>
     </h1>
     <?php echo $entity->parse(); ?>
