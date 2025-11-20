@@ -30,6 +30,16 @@ class Entity extends AbstractEntity
 
     public function parse(): string
     {
+        if($this->getType() == Types::TEMPLATE)
+        {
+            $fnTemplate = ROOT_PATH . '/Pool' . Manager::getIDToPath($this->getKey()) . '/Index.tpl';
+
+            if(file_exists($fnTemplate))
+            {
+                return file_get_contents($fnTemplate);
+            }
+        }
+
         $program = $this->getProgram();
 
         $program = preg_replace('/\[(.*?)\]\((.*?)\)/', "<a href='" . ROOT_URL . "$2'>$1</a>", $program);

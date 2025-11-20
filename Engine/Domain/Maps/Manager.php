@@ -111,4 +111,9 @@ class Manager extends DomainManager
 
         return str_replace('/', ':', $URI);
     }
+
+    public static function getIDToPath(string $ID): string
+    {
+        return str_replace(':', '/', $ID);
+    }
 }
