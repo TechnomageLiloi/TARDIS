@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <link rel="icon" type="image/png" href="/Signum.png">
-        <!-- @todo: add function to link scripts and styles -->
+
         <script src="<?php echo ROOT_URL; ?>/vendor/technomage-liloi/rune-framework/Frontside/Library/Jquery.min.js"></script>
         <script src="<?php echo ROOT_URL; ?>/vendor/technomage-liloi/rune-framework/Frontside/Library/Underscore.min.js"></script>
         <script src="<?php echo ROOT_URL; ?>/vendor/technomage-liloi/rune-framework/Frontside/Library/Backbone.min.js"></script>

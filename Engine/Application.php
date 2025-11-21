@@ -58,6 +58,7 @@ class Application extends GeneralApplication
                 $update = ConfigManager::load('update')->getString();
                 if($update)
                 {
+                    // @todo: add template file.
                     return [
                         'render' => '<div style="text-align: center; font-size: xx-large;">Updating TARDIS game.</div>'
                     ];
