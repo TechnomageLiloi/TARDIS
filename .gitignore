@@ -4,3 +4,5 @@
 /Install/Dump/
 /Pool/
 /Pool.zip
+/Tests/Jasmine/
+/Tests/.phpunit.result.cache
