@@ -1,2 +1,6 @@
 /.idea/
 /.htpasswd
+/Core/vendor/
+/Core/composer.lock
+/Macrocosm/
+/Config/
