@@ -14,3 +14,7 @@ Creating forks of TARDIS for the purpose of commercial distribution, sale, or pa
 
 * Prohibition of Fork Monetization
 * Non-Commercial Use of Forks
+
+### Legal Notice & Trademarks
+
+TARDIS and Doctor Who are registered trademarks of the British Broadcasting Corporation (BBC)
