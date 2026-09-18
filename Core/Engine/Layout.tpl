@@ -27,7 +27,7 @@
 
         <?php if($admin): ?>
             <div id="admin" style="background-color: silver; padding: 5px;border-radius: 3px;text-align: center;">
-
+                <a href="javascript:void(0)" class="butn" onclick="Requests.Admin.Password.logout();">Logout</a>
             </div>
         <?php endif; ?>
 
