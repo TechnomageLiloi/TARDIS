@@ -8,7 +8,8 @@ class Secure
 {
     public static function checkPassword(string $password): bool
     {
-        return false;
+        $admin = DomainManager::getConfig()->get('admin');
+        return password_verify($password, $admin['password']);
     }
 
     public static function login(): void

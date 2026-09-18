@@ -17,6 +17,7 @@
 
         <script src="/Core/Engine/API/Requests.js"></script>
         <script src="/Core/Engine/API/Thesis/Requests.js"></script>
+        <script src="/Core/Engine/API/Admin/Requests.js"></script>
 
         <?php if($admin): ?>
 
